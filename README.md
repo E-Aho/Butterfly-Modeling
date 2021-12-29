@@ -24,7 +24,7 @@ Data was computed using open source GIS package QGIS, and the following datasour
 * Bioclimatic data is from [WorldClim](https://www.worldclim.org/data/worldclim21.html)
 * Elevation is from [NASA EROS STRM Plus](https://www2.jpl.nasa.gov/srtm/)
 * Polygons for administrative borders is from [GADM (used for Brazil, China, Mexico, and Malaysia)](https://gadm.org/download_country.html)
-* Polygon for Taman Kinabalu is from [ProtectedPlanet](https://www.protectedplanet.net/785) 
+* Polygon for Taman Kinabalu is from [ProtectedPlanet 785](https://www.protectedplanet.net/785) 
 * Polygon for Region de Calakmul is from [ProtectedPlanet 61401](https://www.protectedplanet.net/61401)
 
 ### Citations:
