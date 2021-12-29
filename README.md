@@ -27,12 +27,15 @@ Data was computed using open source GIS package QGIS, and the following datasour
 * Polygon for Taman Kinabalu is from [ProtectedPlanet](https://www.protectedplanet.net/785) 
 * Polygon for Region de Calakmul is from [ProtectedPlanet 61401](https://www.protectedplanet.net/61401)
 
-Citations:
+### Citations:
+
 Taman Kinabalu: UNEP-WCMC and IUCN (2022), Protected Planet: The World Database on Protected Areas (WDPA) and World Database on Other Effective Area-based Conservation Measures (WD-OECM) [Online], January 2022, Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net.
+
 Region de Calakmul: UNEP-WCMC and IUCN (2022), Protected Planet: The World Database on Protected Areas (WDPA) and World Database on Other Effective Area-based Conservation Measures (WD-OECM) [Online], January 2022, Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net.
+
 Bioclimatic indicators: [Reference article](https://www.nature.com/articles/s41597-020-00726-5#Sec2)
 
-Papers:
+#### Papers:
 
 * 1.Fleishman, E., Austin, G. & Weiss, A. An Empirical Test of Rapoport’s Rule: Elevational Gradients in Montane Butterfly Communities. Ecology 79, 2482–2493 (1998).
 * 2.Park, Y.-S., Céréghino, R., Compin, A. & Lek, S. Applications of artificial neural networks for patterning and predicting aquatic insect species richness in running waters. Ecological Modelling 160, 265–280 (2003).
