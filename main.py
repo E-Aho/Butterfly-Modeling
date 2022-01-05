@@ -3,7 +3,7 @@ from typing import List
 
 import numpy as np
 import pandas as pd
-
+from scipy.spatial import distance
 
 def get_inputs(filename: str = "data/ButterflyFeatures.csv") -> pd.DataFrame:
 
@@ -32,7 +32,7 @@ def compute_jmi(
     features_map = {col: i for col, i in sorted(enumerate(list(features.columns)))}
     remaining_features = list(features.columns)
 
-    is_discrete = get_discrete_dict(features)
+    is_discrete = get_discrete_dict(features.values)
 
     first_info, first_feature = get_first_mi(Y=label, X=features.values, is_discrete=is_discrete)
 
@@ -42,14 +42,36 @@ def compute_jmi(
     return selected_features, information_gains
 
 
-def get_first_mi(X, Y, is_discrete):
-    pass
+def get_first_mi(X, Y, is_discrete) -> [float, int]:
+    max_mi = 0
+    max_i = 0
+    for i in range(len(Y)):
+        pass
+    return
 
-def get_mi(X, Y, is_discrete):
+
+def get_mi(X, Y, is_discrete) -> [float, int]:
     if is_discrete:
         return
     else:
-        return
+        all_vars = np.hstack(X)
+
+def get_entropy(X):
+    distances = get_min_chebyshev_distances(X)
+
+
+
+def get_min_chebyshev_distances(X) -> List[float]:
+        """Returns a list of the minimum chebyshev distance"""
+        out = []
+        for i in range(len(X)):
+            out.append(
+                min([
+                    distance.chebyshev(X[i], X[j]) if j != i else math.inf
+                    for j in range(len(X))
+                ])
+            )
+        return out
 
 def get_discrete_dict(features):
     """Returns a dictionary that tracks if a feature is discrete or continuous"""
@@ -66,7 +88,7 @@ def get_discrete_dict(features):
 def main_entrypoint():
     """Main entrypoint for the code used to analyse factors relating to species richness of butterflies in nations"""
     input_df = get_inputs()
-    input_df.sort_index();
+    input_df.sort_index()
 
     label_col = "logSpeciesDensity"
     non_feature_cols = [label_col, "Country", "SpeciesDensity"]

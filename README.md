@@ -54,3 +54,12 @@ Bioclimatic indicators: [Reference article](https://www.nature.com/articles/s415
 * 14.SANCHEZ-RODRIGUEZ & Baz, A. The effects of elevation on the butterfly communities of a Mediterranean mountain, Sierra de Javalambre, central Spain. Journal of the Lepidopterist’ Society, 49, 192–207 (1995).
 * 15.The imprint of the geographical, evolutionary and ecological context …. archive.ph http://archive.ph/KkmHi (2013).
 * 16.Fraser, R. H. & Currie, D. J. The Species Richness-Energy Hypothesis in a System Where Historical Factors Are Thought to Prevail: Coral Reefs. The American Naturalist 148, 138–159 (1996).
+
+
+Implementation based on the following research:
+[Daniel Homola's MIFS implementation, and blog post on how it was developed](https://github.com/danielhomola/mifs)
+[Yang, H. H. & Moody, J. Data Visualization and Feature Selection: New Algorithms for Nongaussian Data. 7.](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.46.5561&rep=rep1&type=pdf)
+[Bennasar, M., Hicks, Y. & Setchi, R. Feature selection using Joint Mutual Information Maximisation. Expert Systems with Applications 42, 8520–8532 (2015).](https://www.sciencedirect.com/science/article/pii/S0957417415004674)
+[Vergara, J. R. & Estévez, P. A. A review of feature selection methods based on mutual information. Neural Comput & Applic 24, 175–186 (2014).](https://doi.org/10.1007/s00521-013-1368-0)
+[Brown, G., Pocock, A., Zhao, M.-J. & Lujan, M. Conditional Likelihood Maximisation: A Unifying Framework for Information Theoretic Feature Selection. 40.](https://www.jmlr.org/papers/volume13/brown12a/brown12a.pdf)
+[Ross, B. C. Mutual Information between Discrete and Continuous Data Sets. PLOS ONE 9, e87357 (2014).](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0087357)
