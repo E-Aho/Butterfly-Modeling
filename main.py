@@ -4,6 +4,8 @@ from typing import List
 import numpy as np
 import pandas as pd
 from scipy.spatial import distance
+from scipy.special._ufuncs import gamma, psi
+
 
 def get_inputs(filename: str = "data/ButterflyFeatures.csv") -> pd.DataFrame:
 
@@ -56,8 +58,13 @@ def get_mi(X, Y, is_discrete) -> [float, int]:
     else:
         all_vars = np.hstack(X)
 
-def get_entropy(X):
+def get_entropy(X: np.array):
+    """Based on implementation in Daniel Homola's MIFS repo"""
     distances = get_min_chebyshev_distances(X)
+    n, dimension = X.shape
+    unit_volume = np.pi ** (0.5*dimension) / gamma(dimension / 2 + 1)
+    entropy = (dimension * np.mean(np.log(distances) + np.log(unit_volume) + np.log(n-1) - np.log(1)))
+    return entropy
 
 
 
