@@ -20,7 +20,8 @@ def compute_jmi(
         label: pd.DataFrame,
         features: pd.DataFrame,
         feature_count: int = math.inf,
-        produce_plots: bool = False
+        produce_plots: bool = False,
+        k: int = 3
 ) -> [List, List]:
     """Performs feature selection based on JMI (Joint Mutual Information),
      and returns a list of the ordered features and the amount of information they add.
@@ -29,36 +30,77 @@ def compute_jmi(
      :param features: the features to use in feature selection
      :param feature_count: the limit of features to compute. Defaults to computing all features
      :param produce_plots: whether to print and save plots. Defaults to False
+     :param k: the kth neighbor to take the distance from when computing entropy. Defaults to 3
      :returns:  a list of the ordered features, and a list of the amount of information they each add"""
 
-    information = 0
-    selected_features = []
-    information_gains = []
-    features_map = {col: i for col, i in sorted(enumerate(list(features.columns)))}
-    remaining_features = list(features.columns)
+    X = features.to_numpy()
+    Y = label.to_numpy()
 
-    first_info, first_feature = get_first_mi(Y=label, X=features.values)
+    X = preprocess(X)
+    Y = preprocess(Y)
+
+    n_obs, n_features = X.shape
+
+    selected_features = []
+    remaining_features = list(range(n_features))
+    information_list = []
+
+    features_map = {col: i for col, i in sorted(enumerate(list(features.columns)))}
+
+    mi_matrix = np.zeros((n_obs, n_features))
+    mi_matrix[:] = np.nan
+
+    first_info, first_feature = select_first_feature(Y=Y, X=X, k=k)
+    selected_features.append(first_feature)
+    information_list.append(first_info)
+    remaining_features.remove(first_feature)
 
     while len(selected_features) <= min(feature_count, len(features)):
-        pass
+        s = len(selected_features) - 1
 
-    return selected_features, information_gains
+        for feature in remaining_features:
+            mi_matrix[s, feature] = get_mi(feature=feature, selected=selected_features, X=X, Y=Y, k=k)
+
+        current_mi_matrix = mi_matrix[:len(selected_features), remaining_features]
+
+        selected = remaining_features[np.nanargmax(np.nansum(current_mi_matrix, axis=0))]
+
+        information_list.append(np.nanmax(np.nanmin(current_mi_matrix, axis=0)))
+        selected_features.append(selected)
+        remaining_features.remove(selected)
+    return selected_features, information_list
+
+def select_first_feature(X, Y, k: int = 2) -> [float, int]:
+    mi_array = get_first_mi_vector(X=X, Y=Y, k=k)
+    min_val = np.nanmin(mi_array)
+    min_i = np.nanargmin(mi_array)
+    return min_val, min_i
 
 
-def get_first_mi(X, Y) -> [float]:
-    max_mi = 0
-    max_i = 0
-    for i in range(len(Y)):
-        pass
-    return
+def get_first_mi_vector(X, Y, k=2) -> np.ndarray:
+    n, f = X.shape
+    mi_array = []
+    for i in range(f): # could be parallelized for speed up
+        vars = (X[:, i].reshape((n, 1)), Y)
+        stacked_vars = np.hstack(vars)
+        mi = sum([get_entropy(X, k) for X in vars]) - get_entropy(stacked_vars, k)
+        mi_array.append(mi)
+    return np.array(mi_array)
 
+def get_mi_vector(X, Y, selected: list, k=2) -> np.ndarray:
+    n, f = X.shape
+    mi_array = []
+    for i in range(f):
+        mi = get_mi(feature=i, selected=selected, X=X, Y=Y, k=3)
+        mi_array.append(mi)
+    return np.array(mi_array)
 
-def get_mi(feature, selected, X, Y) -> float:
+def get_mi(feature: int, selected: list[int], X: np.ndarray, Y: np.ndarray, k: int = 2) -> float:
 
     n, p = X.shape
     Y = Y.reshape((n, 1))
 
-    joint_data = X[:, (feature + selected)]
+    joint_data = X[:, ([feature] + selected)]
     all_data = (joint_data, Y)
     stacked_data = np.hstack(all_data)
 
@@ -73,11 +115,10 @@ def get_entropy(vars: np.array, k: int = 2) -> float:
     n, dimension = vars.shape
     unit_volume = np.pi ** (0.5*dimension) / gamma(dimension / 2 + 1)
     entropy = (
-            dimension * np.mean(np.log(distances + np.finfo(vars.dtype).eps))
+            dimension * np.mean(np.log(distances + np.finfo(vars.dtype).eps))  # np.finfo(...).eps required to solve floating point issues which led to taking log of 0
             + np.log(unit_volume) + psi(n) - psi(k)
     )
 
-    # np.finfo(...).eps required to solve floating point issues which led to taking log of 0
     return entropy
 
 
@@ -102,7 +143,7 @@ def preprocess(arr) -> np.ndarray:
     scaler = StandardScaler() #TODO: Refactor this, maybe write our own scaler, minimize need for other pkgs
 
     if len(arr.shape) == 1:
-        arr = arr.reshape(-1,1)
+        arr = arr.reshape(-1, 1)
 
     return scaler.fit_transform(arr)
 
