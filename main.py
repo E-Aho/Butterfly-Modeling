@@ -5,9 +5,12 @@ import numpy as np
 import pandas as pd
 from scipy.spatial import distance
 from scipy.special._ufuncs import gamma, psi
+from sklearn.preprocessing import StandardScaler
 
 
 def get_inputs(filename: str = "data/ButterflyFeatures.csv") -> pd.DataFrame:
+
+    # TODO: Normalise each field here before inputting
 
     output_df = pd.read_csv(filename)
     return output_df
@@ -34,9 +37,7 @@ def compute_jmi(
     features_map = {col: i for col, i in sorted(enumerate(list(features.columns)))}
     remaining_features = list(features.columns)
 
-    is_discrete = get_discrete_dict(features.values)
-
-    first_info, first_feature = get_first_mi(Y=label, X=features.values, is_discrete=is_discrete)
+    first_info, first_feature = get_first_mi(Y=label, X=features.values)
 
     while len(selected_features) <= min(feature_count, len(features)):
         pass
@@ -44,7 +45,7 @@ def compute_jmi(
     return selected_features, information_gains
 
 
-def get_first_mi(X, Y, is_discrete) -> [float, int]:
+def get_first_mi(X, Y) -> [float]:
     max_mi = 0
     max_i = 0
     for i in range(len(Y)):
@@ -52,45 +53,58 @@ def get_first_mi(X, Y, is_discrete) -> [float, int]:
     return
 
 
-def get_mi(X, Y, is_discrete) -> [float, int]:
-    if is_discrete:
-        return
-    else:
-        all_vars = np.hstack(X)
+def get_mi(feature, selected, X, Y) -> float:
 
-def get_entropy(X: np.array):
-    """Based on implementation in Daniel Homola's MIFS repo"""
-    distances = get_min_chebyshev_distances(X)
-    n, dimension = X.shape
+    n, p = X.shape
+    Y = Y.reshape((n, 1))
+
+    joint_data = X[:, (feature + selected)]
+    all_data = (joint_data, Y)
+    stacked_data = np.hstack(all_data)
+
+    return sum([get_entropy(z) for z in all_data]) - get_entropy(stacked_data)
+
+
+def get_entropy(vars: np.array, k: int = 2) -> float:
+    """Based on Kraskov et al, 2004, Estimating mutual information, and work by Daniel Homola in MIFS repo"""
+    distances = get_nearest_neighbor_dists(vars, k)
+    if len(vars.shape) == 1:
+        vars = vars.reshape((-1, 1))
+    n, dimension = vars.shape
     unit_volume = np.pi ** (0.5*dimension) / gamma(dimension / 2 + 1)
-    entropy = (dimension * np.mean(np.log(distances) + np.log(unit_volume) + np.log(n-1) - np.log(1)))
+    entropy = (
+            dimension * np.mean(np.log(distances + np.finfo(vars.dtype).eps))
+            + np.log(unit_volume) + psi(n) - psi(k)
+    )
+
+    # np.finfo(...).eps required to solve floating point issues which led to taking log of 0
     return entropy
 
 
-
-def get_min_chebyshev_distances(X) -> List[float]:
-        """Returns a list of the minimum chebyshev distance"""
+def get_nearest_neighbor_dists(vars, k: int = 2) -> List[float]:
+        """Returns a list of the kth minimum chebyshev distance"""
         out = []
-        for i in range(len(X)):
+        if k > len(vars) - 1:
+            raise Exception(f"The given k is too large for the given input.\n K must be <= len(input) - 1, but here:\n"
+                            f"K = {k}, len(vars) = {len(vars)}")
+        for i in range(len(vars)):
             out.append(
-                min([
-                    distance.chebyshev(X[i], X[j]) if j != i else math.inf
-                    for j in range(len(X))
-                ])
+                sorted([
+                    distance.chebyshev(vars[i], vars[j]) if j != i else math.inf
+                    for j in range(len(vars))
+                ])[k-1]
             )
         return out
 
-def get_discrete_dict(features):
-    """Returns a dictionary that tracks if a feature is discrete or continuous"""
-    #     NB: For this project, the only discrete feature is binary, so we only check for binary variables.
-    d = {}
-    for col in features.columns:
-        if set(features[col]) == {0, 1} or {True, False}:
-            d[col] = True
-        else:
-            d[col] = False
-    return d
 
+def preprocess(arr) -> np.ndarray:
+    # TODO: Refactor this, make it work for either X or Y, not X and Y as input and return input as scaled.
+    scaler = StandardScaler() #TODO: Refactor this, maybe write our own scaler, minimize need for other pkgs
+
+    if len(arr.shape) == 1:
+        arr = arr.reshape(-1,1)
+
+    return scaler.fit_transform(arr)
 
 def main_entrypoint():
     """Main entrypoint for the code used to analyse factors relating to species richness of butterflies in nations"""
@@ -104,8 +118,6 @@ def main_entrypoint():
     features = input_df[[col for col in input_df.columns if col not in non_feature_cols]]
 
     compute_jmi(label, features)
-
-
 
 
 if __name__ == "__main__":
