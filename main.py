@@ -71,6 +71,16 @@ def compute_jmi(
     return selected_features, information_list
 
 def select_first_feature(X, Y, k: int = 2) -> [float, int]:
+    """Uses an independent features approach to find the feature in X with the highest MI with Y
+
+    Args:
+        X (np.ndarray): The features
+        Y (np.ndarray): The target variable
+        k (int): Number of neighbours used in the calculation of entropy. Defaults to 2.
+
+    Returns:
+        min_val, min_i ([float, int]): the value of the maximum MI found and the index of the feature
+    """
     mi_array = get_first_mi_vector(X=X, Y=Y, k=k)
     min_val = np.nanmin(mi_array)
     min_i = np.nanargmin(mi_array)
@@ -78,6 +88,16 @@ def select_first_feature(X, Y, k: int = 2) -> [float, int]:
 
 
 def get_first_mi_vector(X, Y, k=2) -> np.ndarray:
+    """Finds the MI of each feature in X with the target Y
+
+    Args:
+        X (np.ndarray): The features
+        Y (np.ndarray): The target variable
+        k (int): Number of neighbours used in the calculation of entropy. Defaults to 2.
+
+    Returns:
+        np.ndarray: An array containing the MIs'
+    """
     n, f = X.shape
     mi_array = []
     for i in range(f): # could be parallelized for speed up
@@ -88,6 +108,17 @@ def get_first_mi_vector(X, Y, k=2) -> np.ndarray:
     return np.array(mi_array)
 
 def get_mi_vector(X, Y, selected: list, k=2) -> np.ndarray:
+    """Finds the MI of each feature in X and all the features in selected given Y
+
+    Args:
+        X (np.ndarray): The features
+        Y (np.ndarray): The target variable
+        selected (list[int]): The indexes of the features selected 
+        k (int): Number of neighbours used in the calculation of entropy. Defaults to 2.
+
+    Returns:
+        np.ndarray: An array containing the MIs'
+    """
     n, f = X.shape
     mi_array = []
     for i in range(f):
@@ -96,7 +127,18 @@ def get_mi_vector(X, Y, selected: list, k=2) -> np.ndarray:
     return np.array(mi_array)
 
 def get_mi(feature: int, selected: list[int], X: np.ndarray, Y: np.ndarray, k: int = 2) -> float:
+    """Find the specific MI of a single feature and all the features in selected given Y
 
+    Args:
+        feature (int): The index of the feature in X
+        selected (list[int]): The indexes of the features selected in X
+        X (np.ndarray): The features
+        Y (np.ndarray): The target variable
+        k (int, optional): Number of neighbours used in the calculation of entropy. Defaults to 2.
+
+    Returns:
+        float: The MI
+    """
     n, p = X.shape
     Y = Y.reshape((n, 1))
 
@@ -108,7 +150,16 @@ def get_mi(feature: int, selected: list[int], X: np.ndarray, Y: np.ndarray, k: i
 
 
 def get_entropy(vars: np.array, k: int = 2) -> float:
-    """Based on Kraskov et al, 2004, Estimating mutual information, and work by Daniel Homola in MIFS repo"""
+    """Based on Kraskov et al, 2004, Estimating mutual information, and work by Daniel Homola in MIFS repo
+    Calculates the joint entropy of all the features in vars
+
+    Args:
+        vars (np.array): The features to calculate the entropy of
+        k (int, optional): Number of neighbours used in the calculation of entropy. Defaults to 2.
+
+    Returns:
+        float: The joint entropy H(features in vars)
+    """
     distances = get_nearest_neighbor_dists(vars, k)
     if len(vars.shape) == 1:
         vars = vars.reshape((-1, 1))
@@ -123,22 +174,41 @@ def get_entropy(vars: np.array, k: int = 2) -> float:
 
 
 def get_nearest_neighbor_dists(vars, k: int = 2) -> List[float]:
-        """Returns a list of the kth minimum chebyshev distance"""
-        out = []
-        if k > len(vars) - 1:
-            raise Exception(f"The given k is too large for the given input.\n K must be <= len(input) - 1, but here:\n"
-                            f"K = {k}, len(vars) = {len(vars)}")
-        for i in range(len(vars)):
-            out.append(
-                sorted([
-                    distance.chebyshev(vars[i], vars[j]) if j != i else math.inf
-                    for j in range(len(vars))
-                ])[k-1]
-            )
-        return out
+    """Returns a list of the kth minimum chebyshev distance
+
+    Args:
+        vars (np.ndarray): The dataset to calculate the pairwise distances on
+        k (int, optional): The number of closest neighbours to return . Defaults to 2.
+
+    Raises:
+        Exception: If the k is greater than the number of data points minus 1
+
+    Returns:
+        List[List[int]]: the sorted distances of the k closest neighbours to each point 
+    """
+    out = []
+    if k > len(vars) - 1:
+        raise Exception(f"The given k is too large for the given input.\n K must be <= len(input) - 1, but here:\n"
+                        f"K = {k}, len(vars) = {len(vars)}")
+    for i in range(len(vars)):
+        out.append(
+            sorted([
+                distance.chebyshev(vars[i], vars[j]) if j != i else math.inf
+                for j in range(len(vars))
+            ])[k-1]
+        )
+    return out
 
 
 def preprocess(arr) -> np.ndarray:
+    """Uses sckit-learn to scaler the data to mean 0 and var 1
+
+    Args:
+        arr (np.ndarray): The array to be scaled
+
+    Returns:
+        np.ndarray: A centred and standarised version of the data
+    """
     # TODO: Refactor this, make it work for either X or Y, not X and Y as input and return input as scaled.
     scaler = StandardScaler() #TODO: Refactor this, maybe write our own scaler, minimize need for other pkgs
 
@@ -146,6 +216,29 @@ def preprocess(arr) -> np.ndarray:
         arr = arr.reshape(-1, 1)
 
     return scaler.fit_transform(arr)
+
+
+def standardise_dataframe(dataframe):
+    """Scales the array of a pandas dataframe
+
+    Args:
+        dataframe (np.ndarray): The array to be scaled
+
+    Returns:
+        np.ndarray: A centred and standarised version of the data
+    """
+    colmeans = np.mean(dataframe)
+    coldeviations = np.std(dataframe)
+    
+    new_dataframe = dataframe.copy()
+    for row in new_dataframe.iterrows():
+        actual_row = tuple(*row[1:])
+        mean_centred = [pair[0]-pair[1] for pair in zip(actual_row, colmeans) ]
+        standarised = [pair[0]/pair[1] for pair in zip(mean_centred, coldeviations)]
+        new_dataframe.loc[row[0],new_dataframe.columns] = standarised
+
+    return new_dataframe
+
 
 def main_entrypoint():
     """Main entrypoint for the code used to analyse factors relating to species richness of butterflies in nations"""
