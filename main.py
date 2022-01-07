@@ -201,7 +201,7 @@ def get_nearest_neighbor_dists(vars, k: int = 2) -> List[float]:
 
 
 def preprocess(arr) -> np.ndarray:
-    """Uses sckit-learn to scaler the data to mean 0 and var 1
+    """Uses sckit-learn to scaler the columns of the data to mean 0 and var 1
 
     Args:
         arr (np.ndarray): The array to be scaled
@@ -219,14 +219,15 @@ def preprocess(arr) -> np.ndarray:
 
 
 def standardise_dataframe(dataframe):
-    """Scales the array of a pandas dataframe
+    """Scales the columns of a pandas dataframe
 
     Args:
-        dataframe (np.ndarray): The array to be scaled
+        dataframe (pandas.Dataframe): The array to be scaled
 
     Returns:
-        np.ndarray: A centred and standarised version of the data
+       new_dataframe (pandas.Dataframe): A centred and standarised version of the data
     """
+    # TODO: exclude all binary columns in the scaling
     colmeans = np.mean(dataframe)
     coldeviations = np.std(dataframe)
     
