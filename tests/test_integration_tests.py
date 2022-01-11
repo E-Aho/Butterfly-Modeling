@@ -28,5 +28,4 @@ class TestComputeBestFeatures:
         assert output_feat == ["c", "b", "a"]
 
         # Checking information is reasonable
-        assert  output_info == sorted(output_info)
         assert min(output_info) > 0

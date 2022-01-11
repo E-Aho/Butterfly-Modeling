@@ -63,7 +63,7 @@ def compute_best_features(
 
         selected = remaining_features[np.nanargmax(np.nanmin(current_mi_matrix, axis=0))]
 
-        information_list.append(np.nanmax(np.nanmax(current_mi_matrix, axis=0)))
+        information_list.append(np.nanmax(np.nanmin(current_mi_matrix, axis=0)))
         selected_features.append(selected)
         remaining_features.remove(selected)
 
@@ -146,7 +146,10 @@ def get_mi(feature: int, selected: list[int], X: np.ndarray, Y: np.ndarray, k: i
     all_data = (joint_data, Y)
     stacked_data = np.hstack(all_data)
 
-    return sum([get_entropy(z) for z in all_data]) - get_entropy(stacked_data)
+    info = sum([get_entropy(z) for z in all_data]) - get_entropy(stacked_data)
+    if info < 0:
+        return np.nan
+    return info
 
 
 def get_entropy(vars: np.array, k: int = 2) -> float:
@@ -253,8 +256,9 @@ def main_entrypoint():
     label = input_df[label_col]
     features = input_df[[col for col in input_df.columns if col not in non_feature_cols]]
 
-    compute_best_features(label, features, produce_plots=True)
-
+    labels, info = compute_best_features(label, features, produce_plots=True)
+    print(f"labels: {labels}")
+    print(f"info: {info}")
 
 if __name__ == "__main__":
     main_entrypoint()
