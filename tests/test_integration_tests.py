@@ -15,10 +15,10 @@ class TestComputeBestFeatures:
         #Low info first feature, high info second feature
         features = pd.DataFrame(
         np.array([
-            [1, 1, 1],
-            [1, 0.9, 1.2],
-            [1, 1, 2],
-            [1, 1.1, 4],
+            [0, 1, 1],
+            [0, 1, 1.2],
+            [0, 2, 2],
+            [0, 2, 4],
         ]), columns=["a", "b", "c"],
         )
 
@@ -28,5 +28,5 @@ class TestComputeBestFeatures:
         assert output_feat == ["c", "b", "a"]
 
         # Checking information is reasonable
-        assert sorted(output_info) == output_info
+        assert  output_info == sorted(output_info)
         assert min(output_info) > 0

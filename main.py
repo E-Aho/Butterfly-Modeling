@@ -57,14 +57,13 @@ def compute_best_features(
     while len(selected_features) <= min(feature_count, len(features)) and len(remaining_features) >= 1:
         s = len(selected_features) - 1
 
-        for feature in remaining_features:
-            mi_matrix[s, feature] = get_mi(feature=feature, selected=selected_features, X=X, Y=Y, k=k)
+        mi_vector = get_mi_vector(X=X, Y=Y, selected=selected_features, remaining=remaining_features, k=k)
+        mi_matrix[s, remaining_features] = mi_vector
+        current_mi_matrix = mi_matrix[:s+1, remaining_features]
 
-        current_mi_matrix = mi_matrix[:len(selected_features), remaining_features]
+        selected = remaining_features[np.nanargmax(np.nanmin(current_mi_matrix, axis=0))]
 
-        selected = remaining_features[np.nanargmax(np.nansum(current_mi_matrix, axis=0))]
-
-        information_list.append(np.nanmax(np.nanmin(current_mi_matrix, axis=0)))
+        information_list.append(np.nanmax(np.nanmax(current_mi_matrix, axis=0)))
         selected_features.append(selected)
         remaining_features.remove(selected)
 
@@ -83,8 +82,8 @@ def select_first_feature(X, Y, k: int = 2) -> [float, int]:
         min_val, min_i ([float, int]): the value of the maximum MI found and the index of the feature
     """
     mi_array = get_first_mi_vector(X=X, Y=Y, k=k)
-    min_val = np.nanmin(mi_array)
-    min_i = np.nanargmin(mi_array)
+    min_val = np.nanmax(mi_array)
+    min_i = np.nanargmax(mi_array)
     return min_val, min_i
 
 
@@ -101,29 +100,29 @@ def get_first_mi_vector(X, Y, k=2) -> np.ndarray:
     """
     n, f = X.shape
     mi_array = []
-    for i in range(f): # could be parallelized for speed up
+    for i in range(f):  # could be parallelized for speed up
         vars = (X[:, i].reshape((n, 1)), Y)
         stacked_vars = np.hstack(vars)
         mi = sum([get_entropy(X, k) for X in vars]) - get_entropy(stacked_vars, k)
         mi_array.append(mi)
     return np.array(mi_array)
 
-def get_mi_vector(X, Y, selected: list, k=2) -> np.ndarray:
+def get_mi_vector(X, Y, selected: list, remaining: list, k=3) -> np.ndarray:
     """Finds the MI of each feature in X and all the features in selected given Y
 
     Args:
         X (np.ndarray): The features
         Y (np.ndarray): The target variable
-        selected (list[int]): The indexes of the features selected 
+        selected (list[int]): The indexes of the features selected
+        remaining(list[int]): the indexes of the remaining features
         k (int): Number of neighbours used in the calculation of entropy. Defaults to 2.
 
     Returns:
         np.ndarray: An array containing the MIs'
     """
-    n, f = X.shape
     mi_array = []
-    for i in range(f):
-        mi = get_mi(feature=i, selected=selected, X=X, Y=Y, k=3)
+    for i in remaining:
+        mi = get_mi(feature=i, selected=selected, X=X, Y=Y, k=k)
         mi_array.append(mi)
     return np.array(mi_array)
 
@@ -217,7 +216,7 @@ def preprocess(arr) -> np.ndarray:
 
     norm_arr = np.linalg.norm(arr, axis=0, ord=2)  # l2 norm for each feature
 
-    return arr/norm_arr
+    return np.nan_to_num(arr/norm_arr, nan=np.finfo(norm_arr.dtype).eps)
 
 
 # def standardise_dataframe(dataframe):
