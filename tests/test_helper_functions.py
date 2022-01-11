@@ -99,7 +99,7 @@ class TestGetMI:
             0.1, 0.2, 0.3, 0.4
         ]).reshape(-1, 1)
 
-        feature = [0]
+        feature = 0
         selected = [2, 3]
 
         mi = get_mi(feature, selected, X, Y)
@@ -128,7 +128,7 @@ class TestGetMI:
         high_x = preprocess(high_x)
         Y = preprocess(Y)
 
-        feature = [1]
+        feature = 1
         selected = [0]
 
         low_mi = get_mi(feature, selected, low_x, Y)
