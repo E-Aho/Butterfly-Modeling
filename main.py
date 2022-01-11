@@ -5,7 +5,6 @@ import numpy as np
 import pandas as pd
 from scipy.spatial import distance
 from scipy.special._ufuncs import gamma, psi
-from sklearn.preprocessing import StandardScaler
 
 
 def get_inputs(filename: str = "data/ButterflyFeatures.csv") -> pd.DataFrame:
