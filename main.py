@@ -9,8 +9,6 @@ from scipy.special._ufuncs import gamma, psi
 
 def get_inputs(filename: str = "data/ButterflyFeatures.csv") -> pd.DataFrame:
 
-    # TODO: Normalise each field here before inputting
-
     output_df = pd.read_csv(filename)
     return output_df
 
@@ -62,8 +60,8 @@ def compute_best_features(
         current_mi_matrix = mi_matrix[:s+1, remaining_features]
 
         selected = remaining_features[np.nanargmax(np.nanmin(current_mi_matrix, axis=0))]
-
         information_list.append(np.nanmax(np.nanmin(current_mi_matrix, axis=0)))
+
         selected_features.append(selected)
         remaining_features.remove(selected)
 
