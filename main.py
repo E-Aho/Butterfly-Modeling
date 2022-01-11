@@ -1,5 +1,5 @@
 import math
-from typing import List
+from typing import List, Union
 
 import numpy as np
 import pandas as pd
@@ -16,7 +16,7 @@ def get_inputs(filename: str = "data/ButterflyFeatures.csv") -> pd.DataFrame:
     return output_df
 
 
-def compute_jmi(
+def compute_best_features(
         label: pd.DataFrame,
         features: pd.DataFrame,
         feature_count: int = math.inf,
@@ -55,7 +55,7 @@ def compute_jmi(
     information_list.append(first_info)
     remaining_features.remove(first_feature)
 
-    while len(selected_features) <= min(feature_count, len(features)):
+    while len(selected_features) <= min(feature_count, len(features)) and len(remaining_features) >= 1:
         s = len(selected_features) - 1
 
         for feature in remaining_features:
@@ -68,7 +68,9 @@ def compute_jmi(
         information_list.append(np.nanmax(np.nanmin(current_mi_matrix, axis=0)))
         selected_features.append(selected)
         remaining_features.remove(selected)
-    return selected_features, information_list
+
+    output_features = [features_map[feat] for feat in selected_features]
+    return output_features, information_list
 
 def select_first_feature(X, Y, k: int = 2) -> [float, int]:
     """Uses an independent features approach to find the feature in X with the highest MI with Y
@@ -201,7 +203,8 @@ def get_nearest_neighbor_dists(vars, k: int = 2) -> List[float]:
 
 
 def preprocess(arr) -> np.ndarray:
-    """Uses sckit-learn to scaler the columns of the data to mean 0 and var 1
+    """Uses np linalg to
+    Assumes that columns are features, and rows are observations
 
     Args:
         arr (np.ndarray): The array to be scaled
@@ -209,36 +212,36 @@ def preprocess(arr) -> np.ndarray:
     Returns:
         np.ndarray: A centred and standarised version of the data
     """
-    # TODO: Refactor this, make it work for either X or Y, not X and Y as input and return input as scaled.
-    scaler = StandardScaler() #TODO: Refactor this, maybe write our own scaler, minimize need for other pkgs
 
     if len(arr.shape) == 1:
         arr = arr.reshape(-1, 1)
 
-    return scaler.fit_transform(arr)
+    norm_arr = np.linalg.norm(arr, axis=0, ord=2)  # l2 norm for each feature
+
+    return arr/norm_arr
 
 
-def standardise_dataframe(dataframe):
-    """Scales the columns of a pandas dataframe
-
-    Args:
-        dataframe (pandas.Dataframe): The array to be scaled
-
-    Returns:
-       new_dataframe (pandas.Dataframe): A centred and standarised version of the data
-    """
-    # TODO: exclude all binary columns in the scaling
-    colmeans = np.mean(dataframe)
-    coldeviations = np.std(dataframe)
-    
-    new_dataframe = dataframe.copy()
-    for row in new_dataframe.iterrows():
-        actual_row = tuple(*row[1:])
-        mean_centred = [pair[0]-pair[1] for pair in zip(actual_row, colmeans) ]
-        standarised = [pair[0]/pair[1] for pair in zip(mean_centred, coldeviations)]
-        new_dataframe.loc[row[0],new_dataframe.columns] = standarised
-
-    return new_dataframe
+# def standardise_dataframe(dataframe):
+#     """Scales the columns of a pandas dataframe
+#
+#     Args:
+#         dataframe (pandas.Dataframe): The array to be scaled
+#
+#     Returns:
+#        new_dataframe (pandas.Dataframe): A centred and standarised version of the data
+#     """
+#     # TODO: exclude all binary columns in the scaling
+#     colmeans = np.mean(dataframe)
+#     coldeviations = np.std(dataframe)
+#
+#     new_dataframe = dataframe.copy()
+#     for row in new_dataframe.iterrows():
+#         actual_row = tuple(*row[1:])
+#         mean_centred = [pair[0]-pair[1] for pair in zip(actual_row, colmeans) ]
+#         standarised = [pair[0]/pair[1] for pair in zip(mean_centred, coldeviations)]
+#         new_dataframe.loc[row[0],new_dataframe.columns] = standarised
+#
+#     return new_dataframe
 
 
 def main_entrypoint():
@@ -252,7 +255,7 @@ def main_entrypoint():
     label = input_df[label_col]
     features = input_df[[col for col in input_df.columns if col not in non_feature_cols]]
 
-    compute_jmi(label, features)
+    compute_best_features(label, features, produce_plots=True)
 
 
 if __name__ == "__main__":

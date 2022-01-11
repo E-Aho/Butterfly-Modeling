@@ -137,3 +137,4 @@ class TestGetMI:
         assert low_mi > 0
         assert high_mi > 0
         assert low_mi < high_mi
+
