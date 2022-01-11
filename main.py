@@ -77,7 +77,7 @@ def select_first_feature(X, Y, k: int = 2) -> [float, int]:
         k (int): Number of neighbours used in the calculation of entropy. Defaults to 2.
 
     Returns:
-        min_val, min_i ([float, int]): the value of the maximum MI found and the index of the feature
+        min_val, min_i ([float, int]): the value of the minimum MI found and the index of the feature
     """
     mi_array = get_first_mi_vector(X=X, Y=Y, k=k)
     min_val = np.nanmax(mi_array)
