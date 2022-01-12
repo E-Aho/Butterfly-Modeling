@@ -220,29 +220,6 @@ def preprocess(arr) -> np.ndarray:
     return np.nan_to_num(arr/norm_arr, nan=np.finfo(norm_arr.dtype).eps)
 
 
-# def standardise_dataframe(dataframe):
-#     """Scales the columns of a pandas dataframe
-#
-#     Args:
-#         dataframe (pandas.Dataframe): The array to be scaled
-#
-#     Returns:
-#        new_dataframe (pandas.Dataframe): A centred and standarised version of the data
-#     """
-#     # TODO: exclude all binary columns in the scaling
-#     colmeans = np.mean(dataframe)
-#     coldeviations = np.std(dataframe)
-#
-#     new_dataframe = dataframe.copy()
-#     for row in new_dataframe.iterrows():
-#         actual_row = tuple(*row[1:])
-#         mean_centred = [pair[0]-pair[1] for pair in zip(actual_row, colmeans) ]
-#         standarised = [pair[0]/pair[1] for pair in zip(mean_centred, coldeviations)]
-#         new_dataframe.loc[row[0],new_dataframe.columns] = standarised
-#
-#     return new_dataframe
-
-
 def main_entrypoint():
     """Main entrypoint for the code used to analyse factors relating to species richness of butterflies in nations"""
     input_df = get_inputs()
