@@ -216,6 +216,7 @@ def preprocess(arr) -> np.ndarray:
         arr = arr.reshape(-1, 1)
 
     norm_arr = np.linalg.norm(arr, axis=0, ord=2)  # l2 norm for each feature
+    # note that because we are using Chebyshev distances, we don't need to adjust mean, just variance
 
     return np.nan_to_num(arr/norm_arr, nan=np.finfo(norm_arr.dtype).eps)
 
