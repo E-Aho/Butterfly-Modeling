@@ -1,5 +1,6 @@
+import argparse
 import math
-from typing import List, Union
+from typing import List
 
 import numpy as np
 import pandas as pd
@@ -7,7 +8,7 @@ from scipy.spatial import distance
 from scipy.special._ufuncs import gamma, psi
 
 
-def get_inputs(filename: str = "data/ButterflyFeatures.csv") -> pd.DataFrame:
+def get_inputs(filename: str) -> pd.DataFrame:
 
     output_df = pd.read_csv(filename)
     return output_df
@@ -29,6 +30,8 @@ def compute_best_features(
      :param produce_plots: whether to print and save plots. Defaults to False
      :param k: the kth neighbor to take the distance from when computing entropy. Defaults to 3
      :returns:  a list of the ordered features, and a list of the amount of information they each add"""
+
+    print(produce_plots)
 
     X = features.to_numpy()
     Y = label.to_numpy()
@@ -66,7 +69,9 @@ def compute_best_features(
         remaining_features.remove(selected)
 
     output_features = [features_map[feat] for feat in selected_features]
+
     return output_features, information_list
+
 
 def select_first_feature(X, Y, k: int = 2) -> [float, int]:
     """Uses an independent features approach to find the feature in X with the highest MI with Y
@@ -223,7 +228,19 @@ def preprocess(arr) -> np.ndarray:
 
 def main_entrypoint():
     """Main entrypoint for the code used to analyse factors relating to species richness of butterflies in nations"""
-    input_df = get_inputs()
+
+    parser = argparse.ArgumentParser(description="Main entrypoint to the Feature Selection algorithm")
+
+    parser.add_argument("-p", "--print-plots",
+                        help="Enables the plot printing function. Will print to the /figures folder",
+                        action="store_true")
+
+    parser.add_argument("--file",
+                        help="Optional path to csv data. Defaults to using data/ButterflyFeatures.csv",
+                        default="data/ButterflyFeatures.csv")
+
+    args = parser.parse_args()
+    input_df = get_inputs(filename=args.file)
     input_df.sort_index()
 
     label_col = "logSpeciesDensity"
@@ -232,8 +249,8 @@ def main_entrypoint():
     label = input_df[label_col]
     features = input_df[[col for col in input_df.columns if col not in non_feature_cols]]
 
-    labels, info = compute_best_features(label, features, produce_plots=True)
-    print(f"labels: {labels}")
+    feature_list, info = compute_best_features(label, features, produce_plots=args.print_plots)
+    print(f"list of features: {feature_list}")
     print(f"info: {info}")
 
 if __name__ == "__main__":

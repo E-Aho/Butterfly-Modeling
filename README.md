@@ -2,31 +2,52 @@
 
 Repo containing the code and data used for the Butterfly MLiS Part 1 module.
 
+## Usage
+
+The following commands should all be entered into a terminal from the base of the repository
+
 To install, make sure you have a compatible version of Python (< 3.9), and run the following command:
 
 `pip install -r requirements.txt`
 
+To run the program, run the following:
+``
+
+Tests are written with PyTest. To install test dependencies, use 
+
+`pip install -r tests/requirements.txt`
+
+To run tests, use 
+
+`python -m pytest tests/ --no-header --no-summary`
+
+
 ## Help
 To check the version of Python you are using, run 
 `python --version`
+This should be >= 3.9. Other versions may work but are not explicitly supported.
+
 
 ## Datasources:
 ### GIS data
 Data was computed using open source GIS package QGIS, and the following datasources:
 
-#### Environmental
+#### Geographic
 * For country borders, [Natural Earth Data](http://www.naturalearthdata.com/downloads/)
-* For net radiation, the [NASA Earth Observations CERES Data](https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_NETFLUX_M), Dec 2020 to Nov 2021
-* For Solar Insolation, the [NASA Earth Observations CERES Data for FLASHFlux](https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_NETFLUX_M), Dec 2020 to Nov 2021
-* For Temperature (Day/Night), the [NASA Earth Observation MODIS Data](https://neo.gsfc.nasa.gov/view.php?datasetId=MOD_LSTD_CLIM_M), Dec 2020 to Nov 2021
-* For Land coverage data, [NASA Earth Observations LP DAAC MCD12Q1 Data](https://neo.gsfc.nasa.gov/view.php?datasetId=MCD12C1_T1)
-* For rainfall data, [ArcGIS Average Annual Rainfall](https://hub.arcgis.com/datasets/fasgis::average-annual-rainfall/about)
-* Bioclimatic data is from [WorldClim](https://www.worldclim.org/data/worldclim21.html)
-* Elevation is from [NASA EROS STRM Plus](https://www2.jpl.nasa.gov/srtm/)
-* PM2.5 Density data is from [NASA SEDAC Obser](https://sedac.ciesin.columbia.edu/data/set/sdei-global-annual-gwr-pm2-5-modis-misr-seawifs-aod)
-* Polygons for administrative borders is from [GADM (used for Brazil, China, Mexico, and Malaysia)](https://gadm.org/download_country.html)
+* * Polygons for administrative borders is from [GADM (used for USA, Brazil, China, Mexico, and Malaysia)](https://gadm.org/download_country.html)
 * Polygon for Taman Kinabalu is from [ProtectedPlanet 785](https://www.protectedplanet.net/785) 
 * Polygon for Region de Calakmul is from [ProtectedPlanet 61401](https://www.protectedplanet.net/61401)
+
+#### Environmental
+* For net radiation, the [NASA Earth Observations CERES Data](https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_NETFLUX_M), Dec 2020 to Nov 2021
+* For Solar Insolation, the [NASA Earth Observations CERES Data for FLASHFlux](https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_NETFLUX_M), Dec 2020 to Nov 2021
+* Bioclimatic data is from [WorldClim](https://www.worldclim.org/data/worldclim21.html)
+* Elevation is from [NASA EROS STRM Plus](https://www2.jpl.nasa.gov/srtm/)
+
+#### Antrhopogenic 
+* For Land coverage data, [NASA Earth Observations LP DAAC MCD12Q1 Data](https://neo.gsfc.nasa.gov/view.php?datasetId=MCD12C1_T1)
+* PM2.5 Density data is from [NASA SEDAC Obser](https://sedac.ciesin.columbia.edu/data/set/sdei-global-annual-gwr-pm2-5-modis-misr-seawifs-aod)
+
 
 ### Citations:
 
@@ -57,7 +78,7 @@ Bioclimatic indicators: [Reference article](https://www.nature.com/articles/s415
 
 
 Implementation based on the following research:
-[Daniel Homola's MIFS implementation, and blog post on how it was developed](https://github.com/danielhomola/mifs)
+[Daniel Homola's MIFS implementation, and blog post on how it was developed](https://danielhomola.com/feature%20selection/phd/mifs-parallelized-mutual-information-based-feature-selection-module/)
 [Yang, H. H. & Moody, J. Data Visualization and Feature Selection: New Algorithms for Nongaussian Data. 7.](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.46.5561&rep=rep1&type=pdf)
 [Bennasar, M., Hicks, Y. & Setchi, R. Feature selection using Joint Mutual Information Maximisation. Expert Systems with Applications 42, 8520–8532 (2015).](https://www.sciencedirect.com/science/article/pii/S0957417415004674)
 [Vergara, J. R. & Estévez, P. A. A review of feature selection methods based on mutual information. Neural Comput & Applic 24, 175–186 (2014).](https://doi.org/10.1007/s00521-013-1368-0)
