@@ -1,0 +1,66 @@
+\documentclass[prl,showpacs,superscriptaddress,twocolumn,longbibliography]{revtex4-1}
+
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{epsfig}
+\usepackage{bm}% bold math
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage[all]{xy}
+\usepackage{pbox}
+\usepackage{verbatim}
+\usepackage{braket}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{xcolor}
+\newcommand{\red}[1]{\textcolor{red}{#1}} 
+\usepackage{mathtools}
+\newcommand{\change}[1]{\textcolor{blue}{#1}}
+\usepackage{mathtools}
+%\usepackage{tabstackengine}
+\usepackage{enumerate}   
+
+
+\begin{document}
+
+\author{Erin Aho}
+\author{Albert Nyarko-Agyei}
+\author{Soham Talukdar}
+
+\title{Identifying an optimal feature set to analyse species richness in Butterflies}
+
+
+\begin{abstract}
+Butterflies are important taxa, both ecologically and culturally, but have been declining in population despite conservation efforts. To improve understanding of where to focus conservation efforts we aim to identify which features are the most informative in terms of species richness in an area.
+The species count of butterflies in 45 broad regions was analysed. Based on existing research, we decided on a set of 29 features, both bioclimatic and anthropogenic, which are known to affect species richness. We generated a dataset by taking the mean across our regions for each feature, using open-source GIS tools. After researching current feature selection methods, we decided to use Joint Mutual Information (JMI) as our selection criterion, due to the high amount of mutual information in many of our features, and the strong performance JMI has been shown to have form small data samples. After performing feature selection on our dataset using JMI, we were able to identify that the most informative set of 5 features is Annual Precipitation, Isothermality, Mean Diurnal Temperature Range, Precipitation of the Warmest Quarter, and the Percent of Urbanization. We discuss possible limitations of our approach, and areas further research is needed in order to better understand butterfly species richness.
+\end{abstract}
+
+\maketitle
+
+\noindent {\bf\em Introduction.--}
+
+
+\noindent {\bf\em Method.--}
+
+
+\noindent {\bf\em Results.--}
+
+
+\noindent {\bf\em Discussion.--}
+
+
+\noindent {\bf\em Conclusion.--}
+
+
+
+
+
+
+
+
+\end{document}
