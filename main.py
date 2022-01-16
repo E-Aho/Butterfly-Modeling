@@ -4,8 +4,11 @@ from typing import List
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+
 from scipy.spatial import distance
 from scipy.special._ufuncs import gamma, psi
+
 
 
 def get_inputs(filename: str) -> pd.DataFrame:
@@ -30,8 +33,6 @@ def compute_best_features(
      :param produce_plots: whether to print and save plots. Defaults to False
      :param k: the kth neighbor to take the distance from when computing entropy. Defaults to 3
      :returns:  a list of the ordered features, and a list of the amount of information they each add"""
-
-    print(produce_plots)
 
     X = features.to_numpy()
     Y = label.to_numpy()
@@ -70,7 +71,21 @@ def compute_best_features(
 
     output_features = [features_map[feat] for feat in selected_features]
 
+    if produce_plots:
+        plot_figs(output_features, information_list)
+
     return output_features, information_list
+
+def plot_figs(output_features: List[str], information_list: List[int])-> None:
+    with plt.style.context('science'):
+        x = range(len(output_features))
+        y = information_list
+        fig, ax = plt.subplots(dpi=1600)
+        plt.bar(x, y, width=0.8)
+        ax.legend(title="Incremental information gain")
+        ax.set(xlabel="$n^{th}$ selected feature", ylabel="Information gain/ Shannons")
+        plt.xticks(fontsize=10,)
+        plt.savefig("figures/bar_chart.pdf")
 
 
 def select_first_feature(X, Y, k: int = 2) -> [float, int]:
