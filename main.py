@@ -78,13 +78,14 @@ def compute_best_features(
 
 def plot_figs(output_features: List[str], information_list: List[int])-> None:
     with plt.style.context('science'):
-        x = range(len(output_features))
+        x = range(1, len(output_features)+1)
         y = information_list
         fig, ax = plt.subplots(dpi=1600)
         plt.bar(x, y, width=0.8)
+        plt.xlim(0, 30)
         ax.legend(title="Incremental information gain")
         ax.set(xlabel="$n^{th}$ selected feature", ylabel="Information gain/ Shannons")
-        plt.xticks(fontsize=10,)
+        plt.xticks(np.arange(1, 30, step=10), fontsize=10,)
         plt.savefig("figures/bar_chart.pdf")
 
 
