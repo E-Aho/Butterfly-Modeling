@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.4)  16 JAN 2022 15:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.4)  16 JAN 2022 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,46 +969,53 @@ Underfull \hbox (badness 1406) in paragraph at lines 46--48
  []
 
 [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 87--98
+[2]
+<Features.png, id=76, 988.69376pt x 755.82375pt>
+File: Features.png Graphic file (type png)
+<use Features.png>
+Package pdftex.def Info: Features.png  used on input line 107.
+(pdftex.def)             Requested size: 240.0pt x 183.46579pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--121
 
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 87--98
+Underfull \hbox (badness 1394) in paragraph at lines 110--121
 \OT1/cmr/m/n/10 It is in-ter-est-ing to con-sider the cor-re-la-tion of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--98
+Underfull \hbox (badness 10000) in paragraph at lines 110--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--98
+Underfull \hbox (badness 10000) in paragraph at lines 110--121
 
  []
 
-[2]
-Underfull \hbox (badness 1917) in paragraph at lines 101--105
+
+Underfull \hbox (badness 1917) in paragraph at lines 124--128
 \OT1/cmr/m/n/10 This is backed by stud-ies that present con-flict-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--105
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
 
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 101--105
+Underfull \hbox (badness 2469) in paragraph at lines 124--128
 \OT1/cmr/m/n/10 Overall, we have been suc-cess-ful in re-duc-ing the
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 101--105
+Underfull \hbox (badness 2698) in paragraph at lines 124--128
 \OT1/cmr/m/n/10 di-men-sion re-duc-tion tech-niques that con-vo-lute the
  []
 
-(./ButterflyRichnessPaper.bbl
+[3 <./Features.png>] (./ButterflyRichnessPaper.bbl
 Underfull \hbox (badness 4060) in paragraph at lines 75--84
  []\OT1/cmr/m/n/9 D. L. Wag-ner, E. M. Grames, M. L. Foris-ter,
  []
@@ -1024,7 +1031,7 @@ Underfull \hbox (badness 1968) in paragraph at lines 75--84
 cmr/m/n/9 (2021),
  []
 
-[3]
+
 Underfull \hbox (badness 1527) in paragraph at lines 243--247
  []\OT1/cmr/m/n/9 B. C. Ross, []PLoS ONE \OT1/cmr/bx/n/9 9 \OT1/cmr/m/n/9 (2014
 ), 10.1371/JOUR-
@@ -1046,13 +1053,13 @@ Package rerunfilecheck Info: File `ButterflyRichnessPaper.out' has not changed.
 (rerunfilecheck)             Checksum: F02299136410A65343AE39B126BAB13A;657.
  ) 
 Here is how much of TeX's memory you used:
- 24862 strings out of 478994
- 426156 string characters out of 5858185
- 784468 words of memory out of 5000000
- 41832 multiletter control sequences out of 15000+600000
+ 24868 strings out of 478994
+ 426241 string characters out of 5858185
+ 786563 words of memory out of 5000000
+ 41836 multiletter control sequences out of 15000+600000
  411401 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,6n,88p,3250b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,6n,88p,3250b,405s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -1066,10 +1073,10 @@ al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on ButterflyRichnessPaper.pdf (4 pages, 171458 bytes).
+Output written on ButterflyRichnessPaper.pdf (4 pages, 217532 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
+ 204 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
  36 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 42 words of extra memory for PDF output out of 10000 (max. 10000000)
 

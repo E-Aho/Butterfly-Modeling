@@ -82,7 +82,30 @@ However, there are problems that aises from mutual information based feature sel
 
 
 \noindent {\bf\em Results.--}
-The result of the JMI feature selection algorithm highlighted the features that have the most mutual information with the target variable of this paper, species density. The mean annual precipitation was the first feature selected by the algorithm. This means that when we took each feature and the target variable, this feature had the highest amount of information gain. The next two selected features were also annual measures of the respective variables, potentially signifying the versatility of the mean of over this timeframe to persevering information. There were significant falls in information gain after the addition of the 7th and the 24th variables meaning that the dataset was already saturated with information and the addition of these variables had started to skew our information on the target variable rather than keep our knowledge uniform because this would be associated with high levels of entropy and mutual information.
+\begin{center}
+\begin{tabular}{||c c||} 
+ \hline
+Top 6 Features & MI \\
+ \hline\hline
+ Mean annual precipitation & 0.516\\ 
+ \hline
+ Mean isothermality & 0.652\\
+  \hline
+ Elevation & 0.539\\
+ \hline
+ Mean Diurnal Range & 0.507\\
+ \hline
+ Precipitation of warmest quarter & 0.499\\
+ \hline
+ Mean min temp of coldest month & 0.457\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+The result of the JMI feature selection algorithm highlighted a set of features that have high mutual information with the target variable of this paper, species density. The mean annual precipitation was the first feature selected by the algorithm. This means that when we took each feature and the target variable, this feature had the highest amount of information gain. The next selected feature was also annual measures of the respective variables, potentially signifying the versatility of the mean of over this timeframe to persevering information. There were significant falls in information gain after the addition of the 7th and the 24th variables meaning that the dataset was already saturated with information and the addition of these variables had started to skew our information on the target variable rather than keep our knowledge uniform because this would be associated with high levels of entropy and mutual information.
+
+\begin{center}\includegraphics[width=240pt]{Features.png}\end{center}
+
 
 \noindent {\bf\em Discussion.--}
 From the figure, we can see that the highest information gain to the set of selected features was after adding the mean isothermality and there is scientific material that supports this idea of isothermality being one of the crucial factors to species richness \cite{rueda-m_environmental_2021}. Each subsequently selected feature still added information however the resulting information gain was strictly decreasing. This is natural if information is being repeated across variables so by the addition of the 23rd variable, the complexity of the distribution of butterflies has already been captured by the selected variables hence the information gain from new features is low. 
