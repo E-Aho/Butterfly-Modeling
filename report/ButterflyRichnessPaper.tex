@@ -6,23 +6,14 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{graphicx}
-\usepackage{float}
-\usepackage{epsfig}
 \usepackage{bm}% bold math
-\usepackage{mathrsfs}
-\usepackage{multirow}
 \usepackage[all]{xy} 
-\usepackage{pbox}
 \usepackage{verbatim}
 \usepackage{braket}
 \usepackage{mathtools}
 \usepackage{bm}
 \usepackage{tikz}
 \usepackage{xcolor}
-\newcommand{\red}[1]{\textcolor{red}{#1}} 
-\usepackage{mathtools}
-\newcommand{\change}[1]{\textcolor{blue}{#1}}
-\usepackage{mathtools}
 %\usepackage{tabstackengine}
 \usepackage{enumerate}   
 
@@ -45,45 +36,32 @@ The species count of butterflies in 45 broad regions was analysed. Based on exis
 
 \noindent {\bf\em Introduction.--}
 Butterflies (Lepidoptera: Rhopalocera) are among the most familiar group of all insects, approximately 17,200 species worldwide\cite{shields_world_1989}. They have been prominently featured in cultural imagery going back at least two millennia.\cite{Dicke2000}, and historically they have played an important part in developing our understanding of biodiversity\cite{levin_butterflies_2001}. 
-\newline
-\newline
+
 Butterflies also have a vital role in their ecosystems, where they act as a pollinator, helping plants to reproduce and increasing floral genetic variation\cite{ghazanfar_butterflies_2016}.
-\newline
-\newline
+
 Their cultural and ecological importance makes it especially worrying that, despite conservation efforts, butterfly populations have been declining rapidly alongside most insect groups worldwide \cite{Wagner2021}. While it is known that this unprecedented rate of biodiversity loss is tied with human activities, such as deforestation and climate change\cite{white_human_2007, montgomery_is_2020, clark_effects_2007}, there has been limited success in predicting where best to focus future conservation efforts. By finding which factors provide the most information about butterfly species richness, we aim to reduce this knowledge gap and help direct conservation efforts to where they are most needed.
 
 \noindent {\bf Existing understanding.--}
-
 Species richness (i.e., the number of species occurring in a given area) is commonly used as a health descriptor for a community, as it combines many relevant ecological features such as environmental stability, ecosystem productivity, and biological factors\cite{Park2003}.
-\newline
-\newline
-One feature which is sure to impact the number of species in a given region is the region's area. Regarding how number of species in a region varies with the area of the region, it has been observed that log(species count) correlates with log(area)\cite{connor_2001_sar}. Connor \& McCoy (1979) discussed two main hypotheses explaining species-area relationships (SAR):(i) the habitat diversity hypothesis; and (ii) the demographic process hypothesis. The first hypothesis states that larger areas are more likely to contain more habitat types, which could support a greater diversity of species. In contrast, the demographic explanation incorporates the dynamic processes of dispersal, colonization, speciation and extinction at multiple spatial scales. Larger areas have higher probabilities of colonization and speciation and lower probabilities of extinction, fostering higher diversity\cite{Drakare2006}.  Investigating these hypothesis is beyond the scope of this paper, and while these hypotheses may disagree on the exact mechanism that drive the SAR, they agree $log(species count)$ correlates with $log(area)$, which is a key result we will make use of in our methodology.
-\newline
-\newline
+
+One feature which is sure to impact the number of species in a given region is the region's area. Regarding how number of species in a region varies with the area of the region, it has been observed that log(species count) correlates with log(area)\cite{connor_2001_sar}. Connor \& McCoy (1979) discussed two main hypotheses explaining species-area relationships (SAR):(i) the habitat diversity hypothesis; and (ii) the demographic process hypothesis. The first hypothesis states that larger areas are more likely to contain more habitat types, which could support a greater diversity of species. In contrast, the demographic explanation incorporates the dynamic processes of dispersal, colonization, speciation and extinction at multiple spatial scales. Larger areas have higher probabilities of colonization and speciation and lower probabilities of extinction, fostering higher diversity\cite{Drakare2006}.  Investigating these hypothesis is beyond the scope of this paper, and while these hypotheses may disagree on the exact mechanism that drive the SAR, they agree $log(species \: count)$ correlates with $log(area)$, which is a key result we will make use of in our methodology.
+
 Many factors which influence species viability can vary considerably even within small distances\cite{john_wiley__sons_ltd_species_2007}. It is well known that total available energy (most commonly solar energy flux) is an important factor for the overall biodiversity in a region\cite{hawkins_energy_2003, currie_energy_1991}. For butterflies in particular, changes in volume of rainfall in local micro-climates has been shown to strongly affect the population of several species of butterflies\cite{Haneda2019}. It has also been shown that Butterfly communities follow Rapoport's Rule, and show a strong elevational gradient in species richness\cite{Fleishman1998, Arturo}. 
-\newline
-\newline
+
 Several studies show that agricultural land use can affect both habitat suitability and availability of species who would live in grasslands\cite{smith}. Urbanization is one of the most important causes of natural habitat loss and fragmentation, and is linked to decreased plant species diversity, reduced water quality, and increased air and soil pollution, which in turn can cause species diversity decline\cite{smith,Tzortzakaki2019}. 
-\newline
-\newline
 Modern ecological research commonly investigates anthropogenic causes of biodiversity loss like urbanisation, deforestation, and global environmental change, in the aim of understanding how human activity is affecting our planet so that we might mitigate our harmful impacts\cite{hill_responses_2002, munguira_conservation_1995, white_human_2007, sanchez-bayo_worldwide_2019}. Against this background, understanding the relationship between species richness and environmental factors is particularly important. 
-\newline
-\newline
+
 Exactly which features are most important to species richness is not well understood, and differs for each taxa. We aim to help shrink this gap in information for butterflies by finding which features are the most important to track so that we can better understand how the impacts of anthropogenic habitat disruption will affect butterflies moving forward. We have thus created a broad set of features based on the factors which are important to biodiversity, informed by our discussion above, and aim to find the most informative features for Butterflies specifically.
 
 
 \noindent 
-\newline
-\newline {\bf\em Method.--}
-We were provided with a set of 45 regions, and the number of species found in each. We generated a dataset by taking the mean across our regions for each feature, using open-source GIS tools.
-\newline
-\newline
-Based on the work in Species-Area relationships by Connor et al\cite{connor_2001_sar}, we created our target variable from the given data by taking $log(species count)/log(area)$, which gives us an estimator for species richness that is not dependent on the area of a region. Based on the studies discussed, we identified the importance of accounting for climatic variation, elevation, available energy, and human influences.  To account for climatic variability, we used the unitary 19 bioclimatic indices which account for the main climate-based physiological constraints for biodiversity\cite{hijmans_very_2005}. Our elevation, net solar flux and land coverage data are from the NASA Near Earth Observatory\cite{}\footnote{For this paper, "Urban" was defined as the "Urban and Built Up" category in the Nasa Land Cover Classification, "Developed" was defined as Croplands, Urban, and Croplands & Vegetation, and "Natural Vegetation" was defined as any forest type, any shrublands, any savannas, grasslands, and wetlands}. We created our feature variables using open source GIS tools\cite{QGIS_software} to calculate zonal statistics, or a zonal histogram in the case of land coverage data, and rasters for each of the features we wanted to investigate. The output from the GIS feature extraction, as well as any preprocessing done before inputting the features into our model, is available on Github \footnote{https://github.com/E-Aho/Butterfly-Modeling}. The full list of features used is given in the \ref{appendix:raw}.
-\newline
-\newline
+
+{\bf\em Method.--}We were provided with a set of 45 regions, and the number of species found in each. We generated a dataset by taking the mean across our regions for each feature, using open-source GIS tools.
+
+Based on the work in Species-Area relationships by Connor et al\cite{connor_2001_sar}, we created our target variable from the given data by taking $log(species \: count)/log(area)$, which gives us an estimator for species richness that is not dependent on the area of a region. Based on the studies discussed, we identified the importance of accounting for climatic variation, elevation, available energy, and human influences.  To account for climatic variability, we used the unitary 19 bioclimatic indices which account for the main climate-based physiological constraints for biodiversity\cite{hijmans_very_2005}. Our elevation, net solar flux and land coverage data are from the NASA Near Earth Observatory\cite{}\footnote{For this paper, "Urban" was defined as the "Urban and Built Up" category in the Nasa Land Cover Classification, "Developed" was defined as Croplands, Urban, and Croplands & Vegetation, and "Natural Vegetation" was defined as any forest type, any shrublands, any savannas, grasslands, and wetlands}. We created our feature variables using open source GIS tools\cite{QGIS_software} to calculate zonal statistics, or a zonal histogram in the case of land coverage data, and rasters for each of the features we wanted to investigate. The output from the GIS feature extraction, as well as any preprocessing done before inputting the features into our model, is available on Github \footnote{https://github.com/E-Aho/Butterfly-Modeling}. The full list of features used is given in Appendix A.
+
 As we are aiming to create a set of features that are easily interpreted and applied to new data, we decided to use feature selection over principal component analysis (PCA). Within feature selection, we made use of a filter method instead of a wrapper method to limit risk of over-fitting, which could be quite prominent due to the large number of features in total (28) when compared to the total number of regions we had observations for (45).
-\newline
-\newline
+
 Choosing a selection criterion is non-trivial, and decades of trying theoretical and heuristic approaches has produced a large number of options. Brown et al\cite{Brown2012} found that Joint Mutual Information (JMI)\cite{yang_data_2012} had the best overall performance in their framework across a number of small sample size datasets. Given our small dataset, we decided to use JMI as our selection criterion.
 
 JMI is an extension of the Mutual Information Feature Selection (MIFS) criterion, proposed by Battiti in 1994:
@@ -102,19 +80,17 @@ Yang and Moody (1999) and Meyer et al. (2008) proposed JMI in an effort to reduc
 One major difficulty in implementing a information based feature selection method is that entropy (and therefore information) for continuous variables is not as simple to calculate as it is for discrete variables. B. Ross\cite{Ross2014} and D. Homola \cite{Homola2016} championed a kNN-based approach to estimating shared information, advancing work done by Kraskov et al in 2004\cite{kraskov_estimating_2004}. This method avoids needing to bin continuous data by using k-nearest neighbour distances to estimate entropy instead, which we made use of in our implementation. For further details on how our implementation works, the code is available on Github \footnote{https://github.com/E-Aho/Butterfly-Modeling}.
 
 
-\noindent {\bf\em Results.--}
-\begin{center}
-\begin{tabular}{||c c||} 
+\noindent {\bf\em Results.--}\begin{center}\begin{tabular}{||c c||}
  \hline
-Top 8 Features & Information Gain \\
+First 10 Features & Information Gain \\
  \hline\hline
- Mean temperature Seasonality & 0.801\\ 
+ Mean temperature seasonality & 0.801\\ 
  \hline
  Mean precipitation of driest month & 1.04\\
   \hline
  Mean precipitation of warmest quarter &  1.01\\
  \hline
- Mean maximum temperature of warmest month &  0.957\\
+ Mean max temperature of warmest month &  0.957\\
  \hline
  Mean diurnal range & 0.949\\
  \hline
@@ -122,27 +98,48 @@ Top 8 Features & Information Gain \\
  \hline
  Annual precipitation & 0.876\\
  \hline
- Latitude & 0.861\\ [1ex] 
+ Latitude & 0.861\\
+ \hline
+ Annual mean Temperature & 0.854\\
+ \hline 
+ Annual insolation & 0.848\\ [1ex]
  \hline
 \end{tabular}
 \end{center}
 
-The result of the JMI feature selection algorithm highlighted a set of features that have optimal information gain with the target variable of this paper, Log(). The mean annual precipitation was the first feature selected by the algorithm. This means that when we took each feature and the target variable, this feature had the highest amount of information gain. 
-\begin{center}\includegraphics[width=240pt]{Features.png}\end{center}
+The result of the JMI feature selection algorithm highlighted a set of features that have optimal information gain with the target variable of this paper, $log(species \: count)/log(area)$. The mean temperature seasonality was the first feature selected by the algorithm. This means that when we took each feature and the target variable, this feature had the highest amount of information gain. 
+
+\begin{center}\includegraphics[width=240pt]{Features.pdf}\end{center}
 
 \noindent {\bf\em Discussion.--}
+As we can see from the above plot, adding the second feature (precipitation in the driest month) added significantly more information than the first variable did alone. This shows that seasonality and the precipitation in the driest month together hold extra information about our target variable than either did separately. Precipitation is also known to be one of the most important environmental factors for butterflies\cite{m_environmental_2021}, so seeing seasonal precipitation features be among the most informative in our dataset make sense.
 
+After adding the second feature, successive additions result in less information gain. This is indicative of increasing amounts of redundancy in our dataset. It should be noted that each feature is still increasing the total amount of information within our selected set, but that some of the information is already accounted for in other variables already selected (e.g mean temperature in the summer has a large amount of redundancy with annual max temperature).
+
+It is interesting to consider the correlation of the variables and the species density along with their order of selection. From the original list of features, the mean minimum temperature of the coldest month had the highest correlation with the species density, but it was selected second last. The next highest correlated feature was mean annual precipitation, which was selected 7th by our algorithm. This emphasises the difference between information gain and correlation, as the most informative feature may not be correlated well if the relationship is non-linear.
+
+Among the features we looked at which were intended to investigate anthropogenic affects (PM 2.5 concentration \& land usage percentages), PM 2.5 was the most informative, and was selected 17th. While it is interesting to note that our anthropogenic variables were not found to be particularly informative, this may be an artefact of our methodology. Due to the majority of our regions being large in area (country sized), and the nature of local human effects typically being short ranged (habitat destruction, air pollution, etc) \cite{he_urban_2014}, it is likely climatological variables were more important at the wide scale of our regions. Further research is needed at with smaller scaled regions, and a larger number of observations, to better identify how butterfly species richness interacts with these features. 
+
+However we should also note that wide scale climate change brought about by human actions has already been shown to affect precipitation and temperature patterns\cite{trenberth_changes_2011, ashton_effects_2009}, and that butterflies in particular are sensitive to changes in temperature extremes that relate to seasonality\cite{bauerfeind_simulating_2014}. Given that our most informative features on butterfly species richness are all rapidly changing year on year as a result of anthropogenic climate change\cite{loarie_velocity_2009}, it is clear that butterfly species richness will be sensitive to future changes in these features. 
+
+A further limitation of our method is that we could not account for human biases in data collection. If more time is spent researching butterflies in a given area, then it is likely that more species will be found. While butterflies are one of the must studied taxa, there are predicted to still be many undiscovered species, particularly in remote areas. In turn, the robustness of species counting methods, such as counting along a transect, are also questioned by Kevin Gross et al\cite{gross_robustness_2007}. While it is hard to account for these factors, the high uncertainty in the true number of species in an area may limit the accuracy of our results.
+
+One must also consider the flaws in the JMI algorithm. In particular, that it is a greedy algorithm, which selects a locally optimal feature at each stage, and should result in groups of features which have the highest mutual information with the target variable, but as noted by Gao et al, this method does not guarantee a globally optimal solution\cite{gao_variational_2016}.  A further study could implement JMIM, an adaptation of the JMI algorithm proposed by Bennasar et al\cite{bennasar_feature_2015}, which tackles this issue by conducting more searches on combinations of features and compare the findings to our results.
+
+An interstingly unimportant feature is that of the Island boolean tag, which did not show significant information gains, being the last selected feature, and having an information gain of just 0.373 Shannons, compared to 0.533 Shannons for the penultimate feature. This follows the findings of Kalmar and Currie in Avian species\cite{kalmar_unified_2007}. Kalmar and Currie found that most variation in species density is not context-specific, and varied similarly on continents and islands according to the same bioclimatic indices. Our findings seem to agree, and find that whether an area is an island or not does not add significant information to the dataset, and so is not particularly relevant to the species richness in butterflies.
 
 \noindent {\bf\em Conclusion.--}
 
-Overall, we have been successful in reducing the original 28 features to a small subset of informative features for butterfly species richness. These findings can be used to help identify areas to focus conservation efforts on. However, they highlight that the list of features that affect butterfly richness is complex and that many connections exist between these variables.
+Overall, we have been successful in reducing the original 28 features to a small subset of informative features for butterfly species richness. These findings can be used to help identify areas to focus conservation efforts on. However, they highlight that the list of features that affect butterfly richness is complex and that many connections exist between these variables. We hope that these findings might help inform conservation efforts by combining them with climatic predictions to identify areas that are most at risk of biodiversity loss in butterflies.
 
 
 \bibliography{Bibliography}
 \bibliographystyle{apsrev4-1}
 
+\onecolumngrid
 \appendix
-\chapter{Features used:}\label{appendix:raw}
+
+\section{Appendix A: Features used} \label{appendix:raw}
 The 28 features examined in our method were the following:
 \begin{itemize}
 \item Latitude
@@ -195,23 +192,8 @@ The 28 features examined in our method were the following:
 	\item Grasslands
 	\item Permanent Wetlands\cite{nasa_landcov}
 \end{itemize}
-\item Particulate Matter < 2.5~{\textmu}m \cite{van_donkelaar_global_2016}
+\item Particulate Matter $<$ 2.5~{\textmu}m \cite{van_donkelaar_global_2016}
 \item Elevation\cite{nasa_srtm}
 \end{itemize}
 
-
 \end{document}
-
-The second added feature was isothermality, and worth noting is that adding this second feature has a greater information gain than the first feature alone. This shows that isothermailty and precipitation together hold extra information about our target variable than either did separately. Isothermality is also known to be one of the most important environmental factors for butterflies \cite{rueda-m_environmental_2021}. After adding the second feature, successive additions result in less information gain. This is indicative of increasing amounts of redundancy in our dataset. It should be noted that each feature is still increasing the total amount of information within our selected set, but that some of the information is already accounted for in other variables already selected. (E.g mean temperature in the summer has a large amount of redundancy with annual max temperature)
-\newline
-\newline
-It is interesting to consider the correlation of the variables and the species density along with their order of selection. From the original list of features, the mean minimum temperature of the coldest month had the highest correlation with the species density at 0.572 but it was only the sixth selected feature. The next highest correlated feature was mean annual precipitation and this was the first feature to be selected by the JMI algorithm. This emphasises the difference between information gain and correlation, as the most informative feature may not be correlated well if the relationship is nonlinear.
-\newline
-\newline
-A limitation of our method is that we could not account for human biases. For a given area, if more time is spent researching butterflies in that area, then it is likely that more species will be found. While butterflies are one of the most studied taxa, there is predicted to still be many undiscovered species, particularly in remote areas. At the very least, the robustness of species counting methods, such as counts along a transect, are question by Kevin Gross et al \cite{gross_robustness_2007}. It is hard to account for these factors, and the high uncertainty in the true number of species in an area is may limit the accuracy of our results.  
-\newline
-\newline
-One must also consider the flaws in the JMI algorithm. In particular, it is a greedy algorithm which selects the locally optimal feature at each stage, which results in should result in groups of features that have the highest mutual information with the target variable, but this approach "lacks theoretical guarantees" according to Gao et al \cite{gao_variational_2016}. A further study could implement JMIM, which tackles this issue of local maxima by conducting more searches on combinations of features, and compare the findings to our results.
-\newline
-\newline
-An interestingly unimportant feature is that of the Island boolean tag, which did not show significant information gains, being the 19th of 28 features selected, and only added  0.316 Shannons to the dataset when selected. This follows the findings of Kalmar and Currie in Avian species \cite{kalmar_unified_2007}. Kalmar and Currie found that most variation in species density is not context-specific, and varied similarly on continents and islands according to the same bioclimatic indices. Our findings seem to agree, and find that whether an area is an island or not does not add significant information to the dataset, and so is not particularly relevant to the species richness in butterflies.

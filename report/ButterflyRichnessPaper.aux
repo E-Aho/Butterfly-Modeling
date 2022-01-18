@@ -14,7 +14,8 @@
 \fi}
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand*\HyPL@Entry[1]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{shields_world_1989}
 \citation{Dicke2000}
 \citation{levin_butterflies_2001}
@@ -31,7 +32,6 @@
 \citation{smith}
 \citation{smith,Tzortzakaki2019}
 \citation{hill_responses_2002,munguira_conservation_1995,white_human_2007,sanchez-bayo_worldwide_2019}
-\HyPL@Entry{0<</P(\376\377\0001)>>}
 \newlabel{FirstPage}{{}{1}{}{section*.1}{}}
 \@writefile{toc}{\contentsline {title}{Identifying an optimal feature set to analyse species richness in Butterflies}{1}{section*.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {abstract}{Abstract}{1}{section*.1}\protected@file@percent }
@@ -48,52 +48,75 @@
 \citation{Homola2016}
 \citation{kraskov_estimating_2004}
 \citation{Note3}
-\HyPL@Entry{1<</P(\376\377\0002)>>}
+\citation{m_environmental_2021}
+\citation{he_urban_2014}
+\citation{trenberth_changes_2011,ashton_effects_2009}
+\citation{bauerfeind_simulating_2014}
+\citation{loarie_velocity_2009}
+\citation{gross_robustness_2007}
+\citation{gao_variational_2016}
+\citation{bennasar_feature_2015}
+\citation{kalmar_unified_2007}
 \bibdata{ButterflyRichnessPaperNotes,Bibliography}
-\bibcite{Dicke2000}{{1}{2000}{{Dicke}}{{}}}
-\bibcite{levin_butterflies_2001}{{2}{2001}{{DeVries}}{{}}}
-\bibcite{ghazanfar_butterflies_2016}{{3}{2016}{{Ghazanfar\ \emph  {et~al.}}}{{Ghazanfar, Malik, Hussain, Iqbal,\ and\ Younas}}}
-\bibcite{Wagner2021}{{4}{2021}{{Wagner\ \emph  {et~al.}}}{{Wagner, Grames, Forister, Berenbaum,\ and\ Stopak}}}
-\bibcite{white_human_2007}{{5}{2007}{{White\ and\ Kerr}}{{}}}
-\bibcite{montgomery_is_2020}{{6}{2020}{{Montgomery\ \emph  {et~al.}}}{{Montgomery, Dunn, Fox, Jongejans, Leather, Saunders, Shortall, Tingley,\ and\ Wagner}}}
-\bibcite{clark_effects_2007}{{7}{2007}{{Clark\ \emph  {et~al.}}}{{Clark, Reed,\ and\ Chew}}}
-\bibcite{connor_2001_sar}{{8}{2001}{{Connor\ and\ McCoy}}{{}}}
-\bibcite{Drakare2006}{{9}{2006}{{Drakare\ \emph  {et~al.}}}{{Drakare, Lennon,\ and\ Hillebrand}}}
-\bibcite{john_wiley__sons_ltd_species_2007}{{10}{2007}{{Brown\ \emph  {et~al.}}}{{Brown, Jacobs,\ and\ Peet}}}
-\bibcite{hawkins_energy_2003}{{11}{2003}{{Hawkins\ \emph  {et~al.}}}{{Hawkins, Field, Cornell, Currie, Guégan, Kaufman, Kerr, Mittelbach, Oberdorff, O'Brien, Porter,\ and\ Turner}}}
-\bibcite{currie_energy_1991}{{12}{1991}{{Currie}}{{}}}
-\bibcite{Haneda2019}{{13}{2019}{{Haneda\ and\ Panggabean}}{{}}}
-\bibcite{Fleishman1998}{{14}{1998}{{Fleishman\ \emph  {et~al.}}}{{Fleishman, Austin,\ and\ Weiss}}}
-\bibcite{Arturo}{{15}{1995}{{SANCHEZ-RODRIGUEZ\ and\ Baz}}{{}}}
-\bibcite{smith}{{16}{2006}{{Öckinger\ and\ Smith}}{{}}}
-\bibcite{Tzortzakaki2019}{{17}{2019}{{Tzortzakaki\ \emph  {et~al.}}}{{Tzortzakaki, Kati, Panitsa, Tzanatos,\ and\ Giokas}}}
-\bibcite{Park2003}{{18}{2003}{{Park\ \emph  {et~al.}}}{{Park, Céréghino, Compin,\ and\ Lek}}}
-\bibcite{hijmans_very_2005}{{19}{2005}{{Hijmans\ \emph  {et~al.}}}{{Hijmans, Cameron, Parra, Jones,\ and\ Jarvis}}}
-\bibcite{Note1}{{20}{}{{Note1}}{{}}}
-\bibcite{Note2}{{21}{}{{Note2}}{{}}}
-\bibcite{Brown2012}{{22}{2012}{{Brown\ \emph  {et~al.}}}{{Brown, Pocock, Zhao,\ and\ Luján}}}
-\bibcite{yang_data_2012}{{23}{2012}{{Yang\ and\ Moody}}{{}}}
-\bibcite{Ross2014}{{24}{2014}{{Ross}}{{}}}
-\bibcite{Homola2016}{{25}{}{{Hom}}{{}}}
-\bibcite{Note3}{{26}{}{{Note3}}{{}}}
-\bibcite{rueda-m_environmental_2021}{{27}{2021}{{Rueda-M\ \emph  {et~al.}}}{{Rueda-M, Salgado-Roa, Gantiva-Q, Pardo-Díaz,\ and\ Salazar}}}
-\bibcite{gross_robustness_2007}{{28}{2007}{{Gross\ \emph  {et~al.}}}{{Gross, Kalendra, Hudgens,\ and\ Haddad}}}
-\bibcite{gao_variational_2016}{{29}{2016}{{Gao\ \emph  {et~al.}}}{{Gao, Steeg,\ and\ Galstyan}}}
-\bibcite{kalmar_unified_2007}{{30}{2007}{{Kalmar\ and\ Currie}}{{}}}
-\citation{fick_wordlclim_2017}
-\HyPL@Entry{2<</P(\376\377\0003)>>}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{3}{section*.3}\protected@file@percent }
-\newlabel{LastBibItem}{{30}{3}{}{section*.3}{}}
+\bibcite{shields_world_1989}{{1}{1989}{{Shields}}{{}}}
+\bibcite{Dicke2000}{{2}{2000}{{Dicke}}{{}}}
+\bibcite{levin_butterflies_2001}{{3}{2001}{{DeVries}}{{}}}
+\bibcite{ghazanfar_butterflies_2016}{{4}{2016}{{Ghazanfar\ \emph  {et~al.}}}{{Ghazanfar, Malik, Hussain, Iqbal,\ and\ Younas}}}
+\bibcite{Wagner2021}{{5}{2021}{{Wagner\ \emph  {et~al.}}}{{Wagner, Grames, Forister, Berenbaum,\ and\ Stopak}}}
+\bibcite{white_human_2007}{{6}{2007}{{White\ and\ Kerr}}{{}}}
+\bibcite{montgomery_is_2020}{{7}{2020}{{Montgomery\ \emph  {et~al.}}}{{Montgomery, Dunn, Fox, Jongejans, Leather, Saunders, Shortall, Tingley,\ and\ Wagner}}}
+\bibcite{clark_effects_2007}{{8}{2007}{{Clark\ \emph  {et~al.}}}{{Clark, Reed,\ and\ Chew}}}
+\bibcite{Park2003}{{9}{2003}{{Park\ \emph  {et~al.}}}{{Park, Céréghino, Compin,\ and\ Lek}}}
+\bibcite{connor_2001_sar}{{10}{2001}{{Connor\ and\ McCoy}}{{}}}
+\bibcite{Drakare2006}{{11}{2006}{{Drakare\ \emph  {et~al.}}}{{Drakare, Lennon,\ and\ Hillebrand}}}
+\bibcite{john_wiley__sons_ltd_species_2007}{{12}{2007}{{Brown\ \emph  {et~al.}}}{{Brown, Jacobs,\ and\ Peet}}}
+\bibcite{hawkins_energy_2003}{{13}{2003}{{Hawkins\ \emph  {et~al.}}}{{Hawkins, Field, Cornell, Currie, Guégan, Kaufman, Kerr, Mittelbach, Oberdorff, O'Brien, Porter,\ and\ Turner}}}
+\bibcite{currie_energy_1991}{{14}{1991}{{Currie}}{{}}}
+\bibcite{Haneda2019}{{15}{2019}{{Haneda\ and\ Panggabean}}{{}}}
+\bibcite{Fleishman1998}{{16}{1998}{{Fleishman\ \emph  {et~al.}}}{{Fleishman, Austin,\ and\ Weiss}}}
+\bibcite{Arturo}{{17}{1995}{{SANCHEZ-RODRIGUEZ\ and\ Baz}}{{}}}
+\bibcite{smith}{{18}{2006}{{Öckinger\ and\ Smith}}{{}}}
+\bibcite{Tzortzakaki2019}{{19}{2019}{{Tzortzakaki\ \emph  {et~al.}}}{{Tzortzakaki, Kati, Panitsa, Tzanatos,\ and\ Giokas}}}
+\bibcite{hill_responses_2002}{{20}{2002}{{Hill\ \emph  {et~al.}}}{{Hill, Thomas, Fox, Telfer, Willis, Asher,\ and\ Huntley}}}
+\bibcite{munguira_conservation_1995}{{21}{1995}{{Munguira}}{{}}}
+\bibcite{sanchez-bayo_worldwide_2019}{{22}{2019}{{Sánchez-Bayo\ and\ Wyckhuys}}{{}}}
+\bibcite{hijmans_very_2005}{{23}{2005}{{Hijmans\ \emph  {et~al.}}}{{Hijmans, Cameron, Parra, Jones,\ and\ Jarvis}}}
+\bibcite{Note1}{{24}{}{{Note1}}{{}}}
+\bibcite{QGIS_software}{{25}{2022}{{{QGIS Development Team}}}{{}}}
+\bibcite{Note2}{{26}{}{{Note2}}{{}}}
+\bibcite{Brown2012}{{27}{2012}{{Brown\ \emph  {et~al.}}}{{Brown, Pocock, Zhao,\ and\ Luján}}}
+\bibcite{yang_data_2012}{{28}{2012}{{Yang\ and\ Moody}}{{}}}
+\bibcite{Ross2014}{{29}{2014}{{Ross}}{{}}}
+\bibcite{Homola2016}{{30}{}{{Hom}}{{}}}
+\bibcite{kraskov_estimating_2004}{{31}{2004}{{Kraskov\ \emph  {et~al.}}}{{Kraskov, Stoegbauer,\ and\ Grassberger}}}
+\bibcite{Note3}{{32}{}{{Note3}}{{}}}
+\bibcite{he_urban_2014}{{33}{2014}{{He\ \emph  {et~al.}}}{{He, Liu, Tian,\ and\ Ma}}}
+\bibcite{trenberth_changes_2011}{{34}{2011}{{Trenberth}}{{}}}
+\bibcite{ashton_effects_2009}{{35}{2009}{{Ashton\ \emph  {et~al.}}}{{Ashton, Gutiérrez,\ and\ Wilson}}}
+\bibcite{bauerfeind_simulating_2014}{{36}{2014}{{Bauerfeind\ and\ Fischer}}{{}}}
+\bibcite{loarie_velocity_2009}{{37}{2009}{{Loarie\ \emph  {et~al.}}}{{Loarie, Duffy, Hamilton, Asner, Field,\ and\ Ackerly}}}
+\bibcite{gross_robustness_2007}{{38}{2007}{{Gross\ \emph  {et~al.}}}{{Gross, Kalendra, Hudgens,\ and\ Haddad}}}
+\bibcite{gao_variational_2016}{{39}{2016}{{Gao\ \emph  {et~al.}}}{{Gao, Steeg,\ and\ Galstyan}}}
+\bibcite{bennasar_feature_2015}{{40}{2015}{{Bennasar\ \emph  {et~al.}}}{{Bennasar, Hicks,\ and\ Setchi}}}
+\bibcite{kalmar_unified_2007}{{41}{2007}{{Kalmar\ and\ Currie}}{{}}}
+\bibcite{nasa_insol}{{42}{2022{}}{{nas}}{{}}}
+\bibcite{nasa_netflux}{{43}{2022{}}{{nas}}{{}}}
+\bibcite{nasa_landcov}{{44}{2022{}}{{nas}}{{}}}
+\bibcite{van_donkelaar_global_2016}{{45}{2016}{{van Donkelaar\ \emph  {et~al.}}}{{van Donkelaar, Martin, Brauer, Hsu, Kahn, Levy, Lyapustin, Sayer,\ and\ Winker}}}
+\bibcite{nasa_srtm}{{46}{}{{nas}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{4}{section*.3}\protected@file@percent }
+\newlabel{LastBibItem}{{46}{4}{}{section*.3}{}}
 \@writefile{toc}{\appendix }
-\newlabel{appendix:raw}{{}{3}{}{section*.3}{}}
+\citation{fick_wordlclim_2017}
 \citation{nasa_insol}
 \citation{nasa_netflux}
 \citation{nasa_landcov}
 \citation{nasa_landcov}
 \citation{nasa_landcov}
 \citation{van_donkelaar_global_2016}
+\@writefile{toc}{\contentsline {section}{\numberline {}Appendix A: Features used}{5}{section*.4}\protected@file@percent }
+\newlabel{appendix:raw}{{}{5}{}{section*.4}{}}
 \citation{nasa_srtm}
 \bibstyle{apsrev4-1}
-\HyPL@Entry{3<</P(\376\377\0004)>>}
-\newlabel{LastPage}{{}{4}{}{}{}}
-\gdef \@abspage@last{4}
+\newlabel{LastPage}{{}{6}{}{}{}}
+\gdef \@abspage@last{6}

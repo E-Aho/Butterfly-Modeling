@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{37}%
+\begin{thebibliography}{46}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -173,9 +173,9 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~L.}\ \bibnamefont
   {Brown}}, \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont {Jacobs}}, \
   and\ \bibinfo {author} {\bibfnamefont {R.~K.}\ \bibnamefont {Peet}},\
-  }\bibfield  {booktitle} {{\selectlanguage {en}\emph {\bibinfo {booktitle}
-  {{eLS}}}},\ }\href {\doibase 10.1002/9780470015902.a0020488} {\  (\bibinfo
-  {year} {2007}),\ 10.1002/9780470015902.a0020488}\BibitemShut {NoStop}%
+  }\bibfield  {booktitle} {\emph {\bibinfo {booktitle} {{eLS}}},\ }\href
+  {\doibase 10.1002/9780470015902.a0020488} {\  (\bibinfo {year} {2007}),\
+  10.1002/9780470015902.a0020488}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hawkins}\ \emph {et~al.}(2003)\citenamefont
   {Hawkins}, \citenamefont {Field}, \citenamefont {Cornell}, \citenamefont
   {Currie}, \citenamefont {Guégan}, \citenamefont {Kaufman}, \citenamefont
@@ -276,12 +276,12 @@
 \bibitem [{\citenamefont {Munguira}(1995)}]{munguira_conservation_1995}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~L.}\ \bibnamefont
-  {Munguira}},\ }in\ \href {\doibase 10.1007/978-94-011-1282-6_19}
-  {{\selectlanguage {en}\emph {\bibinfo {booktitle} {Ecology and {Conservation}
-  of {Butterflies}}}}},\ \bibinfo {editor} {edited by\ \bibinfo {editor}
-  {\bibfnamefont {A.~S.}\ \bibnamefont {Pullin}}}\ (\bibinfo  {publisher}
-  {Springer Netherlands},\ \bibinfo {address} {Dordrecht},\ \bibinfo {year}
-  {1995})\ pp.\ \bibinfo {pages} {277--289}\BibitemShut {NoStop}%
+  {Munguira}},\ }in\ \href {\doibase 10.1007/978-94-011-1282-6_19} {\emph
+  {\bibinfo {booktitle} {Ecology and {Conservation} of {Butterflies}}}},\
+  \bibinfo {editor} {edited by\ \bibinfo {editor} {\bibfnamefont {A.~S.}\
+  \bibnamefont {Pullin}}}\ (\bibinfo  {publisher} {Springer Netherlands},\
+  \bibinfo {address} {Dordrecht},\ \bibinfo {year} {1995})\ pp.\ \bibinfo
+  {pages} {277--289}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Sánchez-Bayo}\ and\ \citenamefont
   {Wyckhuys}(2019)}]{sanchez-bayo_worldwide_2019}%
   \BibitemOpen
@@ -361,26 +361,120 @@
   \BibitemOpen
   \bibinfo {note} {Https://github.com/E-Aho/Butterfly-Modeling}\BibitemShut
   {NoStop}%
+\bibitem [{\citenamefont {He}\ \emph {et~al.}(2014)\citenamefont {He},
+  \citenamefont {Liu}, \citenamefont {Tian},\ and\ \citenamefont
+  {Ma}}]{he_urban_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {He}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Liu}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Tian}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {Q.}~\bibnamefont {Ma}},\ }\href {\doibase 10.1111/gcb.12553}
+  {\bibfield  {journal} {\bibinfo  {journal} {Global Change Biology}\ }\textbf
+  {\bibinfo {volume} {20}},\ \bibinfo {pages} {2886} (\bibinfo {year}
+  {2014})},\ \bibinfo {note} {\_eprint:
+  https://onlinelibrary.wiley.com/doi/pdf/10.1111/gcb.12553}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Trenberth}(2011)}]{trenberth_changes_2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~E.}\ \bibnamefont
+  {Trenberth}},\ }\href {\doibase 10.3354/cr00953} {\bibfield  {journal}
+  {\bibinfo  {journal} {Climate Research}\ }\textbf {\bibinfo {volume} {47}},\
+  \bibinfo {pages} {123} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ashton}\ \emph {et~al.}(2009)\citenamefont {Ashton},
+  \citenamefont {Gutiérrez},\ and\ \citenamefont
+  {Wilson}}]{ashton_effects_2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Ashton}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Gutiérrez}},
+  \ and\ \bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont {Wilson}},\
+  }\href {\doibase 10.1111/j.1365-2311.2008.01068.x} {\bibfield  {journal}
+  {\bibinfo  {journal} {Ecological Entomology}\ }\textbf {\bibinfo {volume}
+  {34}},\ \bibinfo {pages} {437} (\bibinfo {year} {2009})},\ \bibinfo {note}
+  {\_eprint:
+  https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2311.2008.01068.x}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Bauerfeind}\ and\ \citenamefont
+  {Fischer}(2014)}]{bauerfeind_simulating_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~S.}\ \bibnamefont
+  {Bauerfeind}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Fischer}},\ }\href {\doibase 10.1007/s10144-013-0409-y} {\bibfield
+  {journal} {\bibinfo  {journal} {Population Ecology}\ }\textbf {\bibinfo
+  {volume} {56}},\ \bibinfo {pages} {239} (\bibinfo {year} {2014})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Loarie}\ \emph {et~al.}(2009)\citenamefont {Loarie},
+  \citenamefont {Duffy}, \citenamefont {Hamilton}, \citenamefont {Asner},
+  \citenamefont {Field},\ and\ \citenamefont {Ackerly}}]{loarie_velocity_2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~R.}\ \bibnamefont
+  {Loarie}}, \bibinfo {author} {\bibfnamefont {P.~B.}\ \bibnamefont {Duffy}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Hamilton}}, \bibinfo
+  {author} {\bibfnamefont {G.~P.}\ \bibnamefont {Asner}}, \bibinfo {author}
+  {\bibfnamefont {C.~B.}\ \bibnamefont {Field}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {D.~D.}\ \bibnamefont {Ackerly}},\ }\href {\doibase
+  10.1038/nature08649} {\bibfield  {journal} {\bibinfo  {journal} {Nature}\
+  }\textbf {\bibinfo {volume} {462}},\ \bibinfo {pages} {1052} (\bibinfo {year}
+  {2009})},\ \bibinfo {note} {bandiera\_abtest: a Cg\_type: Nature Research
+  Journals Number: 7276 Primary\_atype: Research Publisher: Nature Publishing
+  Group}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gross}\ \emph {et~al.}(2007)\citenamefont {Gross},
+  \citenamefont {Kalendra}, \citenamefont {Hudgens},\ and\ \citenamefont
+  {Haddad}}]{gross_robustness_2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Gross}}, \bibinfo {author} {\bibfnamefont {E.~J.}\ \bibnamefont {Kalendra}},
+  \bibinfo {author} {\bibfnamefont {B.~R.}\ \bibnamefont {Hudgens}}, \ and\
+  \bibinfo {author} {\bibfnamefont {N.~M.}\ \bibnamefont {Haddad}},\ }\href
+  {\doibase 10.1007/s10144-007-0034-8} {\bibfield  {journal} {\bibinfo
+  {journal} {Population Ecology}\ }\textbf {\bibinfo {volume} {49}},\ \bibinfo
+  {pages} {191} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gao}\ \emph {et~al.}(2016)\citenamefont {Gao},
+  \citenamefont {Steeg},\ and\ \citenamefont
+  {Galstyan}}]{gao_variational_2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Gao}}, \bibinfo {author} {\bibfnamefont {G.~V.}\ \bibnamefont {Steeg}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Galstyan}},\ }\href
+  {http://arxiv.org/abs/1606.02827} {\bibfield  {journal} {\bibinfo  {journal}
+  {arXiv:1606.02827 [cs, stat]}\ } (\bibinfo {year} {2016})},\ \bibinfo {note}
+  {arXiv: 1606.02827}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bennasar}\ \emph {et~al.}(2015)\citenamefont
+  {Bennasar}, \citenamefont {Hicks},\ and\ \citenamefont
+  {Setchi}}]{bennasar_feature_2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Bennasar}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Hicks}}, \
+  and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Setchi}},\ }\href
+  {\doibase 10.1016/j.eswa.2015.07.007} {\bibfield  {journal} {\bibinfo
+  {journal} {Expert Systems with Applications}\ }\textbf {\bibinfo {volume}
+  {42}} (\bibinfo {year} {2015}),\ 10.1016/j.eswa.2015.07.007}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Kalmar}\ and\ \citenamefont
+  {Currie}(2007)}]{kalmar_unified_2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kalmar}}\ and\ \bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
+  {Currie}},\ }\href {\doibase 10.1890/06-1368} {\bibfield  {journal} {\bibinfo
+   {journal} {Ecology}\ }\textbf {\bibinfo {volume} {88}},\ \bibinfo {pages}
+  {1309} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
 \bibitem [{nas(2022{\natexlab{a}})}]{nasa_insol}%
   \BibitemOpen
-  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_INSOL_M}
-  {{\selectlanguage {en}\enquote {\bibinfo {title} {Solar {Insolation} (1
-  month) {\textbar} {NASA}},}\ }} (\bibinfo {year} {2022}{\natexlab{a}}),\
-  \bibinfo {note} {publisher: NASA Earth Observations (NEO)}\BibitemShut
-  {NoStop}%
+  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_INSOL_M} {\enquote
+  {\bibinfo {title} {Solar {Insolation} (1 month) {\textbar} {NASA}},}\ }
+  (\bibinfo {year} {2022}{\natexlab{a}}),\ \bibinfo {note} {publisher: NASA
+  Earth Observations (NEO)}\BibitemShut {NoStop}%
 \bibitem [{nas(2022{\natexlab{b}})}]{nasa_netflux}%
   \BibitemOpen
   \href {https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_NETFLUX_M}
-  {{\selectlanguage {en}\enquote {\bibinfo {title} {Net {Radiation} (1 month)
-  {\textbar} {NASA}},}\ }} (\bibinfo {year} {2022}{\natexlab{b}}),\ \bibinfo
-  {note} {publisher: NASA Earth Observations (NEO)}\BibitemShut {NoStop}%
+  {\enquote {\bibinfo {title} {Net {Radiation} (1 month) {\textbar} {NASA}},}\
+  } (\bibinfo {year} {2022}{\natexlab{b}}),\ \bibinfo {note} {publisher: NASA
+  Earth Observations (NEO)}\BibitemShut {NoStop}%
 \bibitem [{nas(2022{\natexlab{c}})}]{nasa_landcov}%
   \BibitemOpen
-  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=MCD12C1_T1}
-  {{\selectlanguage {en}\enquote {\bibinfo {title} {Land {Cover}
-  {Classification} (1 year) {\textbar} {NASA}},}\ }} (\bibinfo {year}
-  {2022}{\natexlab{c}}),\ \bibinfo {note} {publisher: NASA Earth Observations
-  (NEO)}\BibitemShut {NoStop}%
+  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=MCD12C1_T1} {\enquote
+  {\bibinfo {title} {Land {Cover} {Classification} (1 year) {\textbar}
+  {NASA}},}\ } (\bibinfo {year} {2022}{\natexlab{c}}),\ \bibinfo {note}
+  {publisher: NASA Earth Observations (NEO)}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {van Donkelaar}\ \emph {et~al.}(2016)\citenamefont
   {van Donkelaar}, \citenamefont {Martin}, \citenamefont {Brauer},
   \citenamefont {Hsu}, \citenamefont {Kahn}, \citenamefont {Levy},
