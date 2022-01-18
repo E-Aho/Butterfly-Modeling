@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{29}%
+\begin{thebibliography}{37}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -50,19 +50,40 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
-\bibitem [{\citenamefont {van Huis}(2019)}]{Arnold}%
+\bibitem [{\citenamefont {Shields}(1989)}]{shields_world_1989}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {van
-  Huis}},\ }\href {\doibase 10.1186/s13002-019-0306-3} {\bibfield  {journal}
-  {\bibinfo  {journal} {Journal of ethnobiology and ethnomedicine}\ }\textbf
-  {\bibinfo {volume} {15}},\ \bibinfo {pages} {26} (\bibinfo {year}
-  {2019})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Shields}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {JOURNAL OF THE LEPIDOPTERISTS' SOCIETY}\ }\textbf {\bibinfo {volume} {43}},\
+  \bibinfo {pages} {6} (\bibinfo {year} {1989})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Dicke}(2000)}]{Dicke2000}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Dicke}},\ }\href {\doibase 10.1093/ae/46.4.228} {\bibfield  {journal}
   {\bibinfo  {journal} {American Entomologist}\ }\textbf {\bibinfo {volume}
   {46}},\ \bibinfo {pages} {228} (\bibinfo {year} {2000})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {DeVries}(2001)}]{levin_butterflies_2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~J.}\ \bibnamefont
+  {DeVries}},\ }in\ \href {\doibase
+  https://doi.org/10.1016/B978-0-12-384719-5.00018-6} {\emph {\bibinfo
+  {booktitle} {Encyclopedia of {Biodiversity} ({Second} {Edition})}}},\
+  \bibinfo {editor} {edited by\ \bibinfo {editor} {\bibfnamefont {S.~A.}\
+  \bibnamefont {Levin}}}\ (\bibinfo  {publisher} {Academic Press},\ \bibinfo
+  {address} {Waltham},\ \bibinfo {year} {2001})\ \bibinfo {edition} {second
+  edition}\ ed.,\ pp.\ \bibinfo {pages} {650--661}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ghazanfar}\ \emph {et~al.}(2016)\citenamefont
+  {Ghazanfar}, \citenamefont {Malik}, \citenamefont {Hussain}, \citenamefont
+  {Iqbal},\ and\ \citenamefont {Younas}}]{ghazanfar_butterflies_2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Ghazanfar}}, \bibinfo {author} {\bibfnamefont {M.~F.}\ \bibnamefont
+  {Malik}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Hussain}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Iqbal}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Younas}},\ }\href@noop {}
+  {\bibfield  {journal} {\bibinfo  {journal} {Journal of Entomology and Zoology
+  Studies}\ ,\ \bibinfo {pages} {5}} (\bibinfo {year} {2016})}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Wagner}\ \emph {et~al.}(2021)\citenamefont {Wagner},
   \citenamefont {Grames}, \citenamefont {Forister}, \citenamefont {Berenbaum},\
@@ -77,11 +98,22 @@
   {Proceedings of the National Academy of Sciences}\ }\textbf {\bibinfo
   {volume} {118}} (\bibinfo {year} {2021}),\
   10.1073/PNAS.2023989118}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {White}\ and\ \citenamefont
+  {Kerr}(2007)}]{white_human_2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~J.}\ \bibnamefont
+  {White}}\ and\ \bibinfo {author} {\bibfnamefont {J.~T.}\ \bibnamefont
+  {Kerr}},\ }\href {\doibase 10.1111/j.1466-8238.2007.00298.x} {\bibfield
+  {journal} {\bibinfo  {journal} {Global Ecology and Biogeography}\ }\textbf
+  {\bibinfo {volume} {16}},\ \bibinfo {pages} {290} (\bibinfo {year} {2007})},\
+  \bibinfo {note} {\_eprint:
+  https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1466-8238.2007.00298.x}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Montgomery}\ \emph {et~al.}(2020)\citenamefont
   {Montgomery}, \citenamefont {Dunn}, \citenamefont {Fox}, \citenamefont
   {Jongejans}, \citenamefont {Leather}, \citenamefont {Saunders}, \citenamefont
   {Shortall}, \citenamefont {Tingley},\ and\ \citenamefont
-  {Wagner}}]{Montgomery2020}%
+  {Wagner}}]{montgomery_is_2020}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~A.}\ \bibnamefont
   {Montgomery}}, \bibinfo {author} {\bibfnamefont {R.~R.}\ \bibnamefont
@@ -92,11 +124,11 @@
   {\bibfnamefont {C.~R.}\ \bibnamefont {Shortall}}, \bibinfo {author}
   {\bibfnamefont {M.~W.}\ \bibnamefont {Tingley}}, \ and\ \bibinfo {author}
   {\bibfnamefont {D.~L.}\ \bibnamefont {Wagner}},\ }\href {\doibase
-  https://doi.org/10.1016/j.biocon.2019.108327} {\bibfield  {journal} {\bibinfo
-   {journal} {Biological Conservation}\ }\textbf {\bibinfo {volume} {241}},\
-  \bibinfo {pages} {108327} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+  10.1016/j.biocon.2019.108327} {\bibfield  {journal} {\bibinfo  {journal}
+  {Biological Conservation}\ }\textbf {\bibinfo {volume} {241}},\ \bibinfo
+  {pages} {108327} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Clark}\ \emph {et~al.}(2007)\citenamefont {Clark},
-  \citenamefont {Reed},\ and\ \citenamefont {Chew}}]{Clark2007}%
+  \citenamefont {Reed},\ and\ \citenamefont {Chew}}]{clark_effects_2007}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~J.}\ \bibnamefont
   {Clark}}, \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Reed}}, \
@@ -104,15 +136,26 @@
   {\doibase 10.1007/s11252-007-0029-4} {\bibfield  {journal} {\bibinfo
   {journal} {Urban Ecosystems}\ }\textbf {\bibinfo {volume} {10}},\ \bibinfo
   {pages} {321} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Haneda}\ and\ \citenamefont
-  {Panggabean}(2019)}]{Haneda2019}%
+\bibitem [{\citenamefont {Park}\ \emph {et~al.}(2003)\citenamefont {Park},
+  \citenamefont {Céréghino}, \citenamefont {Compin},\ and\ \citenamefont
+  {Lek}}]{Park2003}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.~F.}\ \bibnamefont
-  {Haneda}}\ and\ \bibinfo {author} {\bibfnamefont {P.~B.}\ \bibnamefont
-  {Panggabean}},\ }\href {\doibase 10.1088/1755-1315/394/1/012041} {\bibfield
-  {journal} {\bibinfo  {journal} {IOP Conference Series: Earth and
-  Environmental Science}\ }\textbf {\bibinfo {volume} {394}},\ \bibinfo {pages}
-  {012041} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.~S.}\ \bibnamefont
+  {Park}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Céréghino}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Compin}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Lek}},\ }\href {\doibase
+  10.1016/S0304-3800(02)00258-2} {\bibfield  {journal} {\bibinfo  {journal}
+  {Ecological Modelling}\ }\textbf {\bibinfo {volume} {160}},\ \bibinfo {pages}
+  {265} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Connor}\ and\ \citenamefont
+  {McCoy}(2001)}]{connor_2001_sar}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Connor}}\ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {McCoy}},\
+  }\href {\doibase 10.1016/B0-12-226865-2/00252-2} {\bibfield  {journal}
+  {\bibinfo  {journal} {Encyclopedia of Biodiversity}\ }\textbf {\bibinfo
+  {volume} {5}},\ \bibinfo {pages} {397} (\bibinfo {year} {2001})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Drakare}\ \emph {et~al.}(2006)\citenamefont
   {Drakare}, \citenamefont {Lennon},\ and\ \citenamefont
   {Hillebrand}}]{Drakare2006}%
@@ -123,6 +166,77 @@
   }\href {\doibase 10.1111/J.1461-0248.2005.00848.X} {\bibfield  {journal}
   {\bibinfo  {journal} {Ecology letters}\ }\textbf {\bibinfo {volume} {9}},\
   \bibinfo {pages} {215} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Brown}\ \emph {et~al.}(2007)\citenamefont {Brown},
+  \citenamefont {Jacobs},\ and\ \citenamefont
+  {Peet}}]{john_wiley__sons_ltd_species_2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~L.}\ \bibnamefont
+  {Brown}}, \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont {Jacobs}}, \
+  and\ \bibinfo {author} {\bibfnamefont {R.~K.}\ \bibnamefont {Peet}},\
+  }\bibfield  {booktitle} {{\selectlanguage {en}\emph {\bibinfo {booktitle}
+  {{eLS}}}},\ }\href {\doibase 10.1002/9780470015902.a0020488} {\  (\bibinfo
+  {year} {2007}),\ 10.1002/9780470015902.a0020488}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hawkins}\ \emph {et~al.}(2003)\citenamefont
+  {Hawkins}, \citenamefont {Field}, \citenamefont {Cornell}, \citenamefont
+  {Currie}, \citenamefont {Guégan}, \citenamefont {Kaufman}, \citenamefont
+  {Kerr}, \citenamefont {Mittelbach}, \citenamefont {Oberdorff}, \citenamefont
+  {O'Brien}, \citenamefont {Porter},\ and\ \citenamefont
+  {Turner}}]{hawkins_energy_2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~A.}\ \bibnamefont
+  {Hawkins}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Field}},
+  \bibinfo {author} {\bibfnamefont {H.~V.}\ \bibnamefont {Cornell}}, \bibinfo
+  {author} {\bibfnamefont {D.~J.}\ \bibnamefont {Currie}}, \bibinfo {author}
+  {\bibfnamefont {J.-F.}\ \bibnamefont {Guégan}}, \bibinfo {author}
+  {\bibfnamefont {D.~M.}\ \bibnamefont {Kaufman}}, \bibinfo {author}
+  {\bibfnamefont {J.~T.}\ \bibnamefont {Kerr}}, \bibinfo {author}
+  {\bibfnamefont {G.~G.}\ \bibnamefont {Mittelbach}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Oberdorff}}, \bibinfo {author}
+  {\bibfnamefont {E.~M.}\ \bibnamefont {O'Brien}}, \bibinfo {author}
+  {\bibfnamefont {E.~E.}\ \bibnamefont {Porter}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.~R.~G.}\ \bibnamefont {Turner}},\ }\href {\doibase
+  10.1890/03-8006} {\bibfield  {journal} {\bibinfo  {journal} {Ecology}\
+  }\textbf {\bibinfo {volume} {84}},\ \bibinfo {pages} {3105} (\bibinfo {year}
+  {2003})},\ \bibinfo {note} {\_eprint:
+  https://onlinelibrary.wiley.com/doi/pdf/10.1890/03-8006}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Currie}(1991)}]{currie_energy_1991}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
+  {Currie}},\ }\href {\doibase 10.1086/285144} {\bibfield  {journal} {\bibinfo
+  {journal} {The American Naturalist}\ }\textbf {\bibinfo {volume} {137}},\
+  \bibinfo {pages} {27} (\bibinfo {year} {1991})},\ \bibinfo {note} {publisher:
+  The University of Chicago Press}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Haneda}\ and\ \citenamefont
+  {Panggabean}(2019)}]{Haneda2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.~F.}\ \bibnamefont
+  {Haneda}}\ and\ \bibinfo {author} {\bibfnamefont {P.~B.}\ \bibnamefont
+  {Panggabean}},\ }\href {\doibase 10.1088/1755-1315/394/1/012041} {\bibfield
+  {journal} {\bibinfo  {journal} {IOP Conference Series: Earth and
+  Environmental Science}\ }\textbf {\bibinfo {volume} {394}},\ \bibinfo {pages}
+  {012041} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fleishman}\ \emph {et~al.}(1998)\citenamefont
+  {Fleishman}, \citenamefont {Austin},\ and\ \citenamefont
+  {Weiss}}]{Fleishman1998}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Fleishman}}, \bibinfo {author} {\bibfnamefont {G.~T.}\ \bibnamefont
+  {Austin}}, \ and\ \bibinfo {author} {\bibfnamefont {A.~D.}\ \bibnamefont
+  {Weiss}},\ }\href {\doibase
+  https://doi.org/10.1890/0012-9658(1998)079[2482:AETORS]2.0.CO;2} {\bibfield
+  {journal} {\bibinfo  {journal} {Ecology}\ }\textbf {\bibinfo {volume} {79}},\
+  \bibinfo {pages} {2482} (\bibinfo {year} {1998})},\ \bibinfo {note}
+  {https://doi.org/10.1890/0012-9658(1998)079[2482:AETORS]2.0.CO;2}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {SANCHEZ-RODRIGUEZ}\ and\ \citenamefont
+  {Baz}(1995)}]{Arturo}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {SANCHEZ-RODRIGUEZ}}\
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Baz}},\ }\href@noop
+  {} {\bibfield  {journal} {\bibinfo  {journal} {Journal of the Lepidopterist'
+  Society,}\ }\textbf {\bibinfo {volume} {49}},\ \bibinfo {pages} {192}
+  (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Öckinger}\ and\ \citenamefont
   {Smith}(2006)}]{smith}%
   \BibitemOpen
@@ -144,83 +258,64 @@
   {\bibinfo  {journal} {Landscape and Urban Planning}\ }\textbf {\bibinfo
   {volume} {183}},\ \bibinfo {pages} {79} (\bibinfo {year} {2019})}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Park}\ \emph {et~al.}(2003)\citenamefont {Park},
-  \citenamefont {Céréghino}, \citenamefont {Compin},\ and\ \citenamefont
-  {Lek}}]{Park2003}%
+\bibitem [{\citenamefont {Hill}\ \emph {et~al.}(2002)\citenamefont {Hill},
+  \citenamefont {Thomas}, \citenamefont {Fox}, \citenamefont {Telfer},
+  \citenamefont {Willis}, \citenamefont {Asher},\ and\ \citenamefont
+  {Huntley}}]{hill_responses_2002}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.~S.}\ \bibnamefont
-  {Park}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Céréghino}},
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Compin}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {S.}~\bibnamefont {Lek}},\ }\href {\doibase
-  10.1016/S0304-3800(02)00258-2} {\bibfield  {journal} {\bibinfo  {journal}
-  {Ecological Modelling}\ }\textbf {\bibinfo {volume} {160}},\ \bibinfo {pages}
-  {265} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Noce}\ \emph {et~al.}(2020)\citenamefont {Noce},
-  \citenamefont {Caporaso},\ and\ \citenamefont {Santini}}]{Noce2020}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Hill}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Thomas}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Fox}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Telfer}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Willis}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Asher}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Huntley}},\ }\href {\doibase 10.1098/rspb.2002.2134}
+  {\bibfield  {journal} {\bibinfo  {journal} {Proceedings. Biological sciences
+  / The Royal Society}\ }\textbf {\bibinfo {volume} {269}},\ \bibinfo {pages}
+  {2163} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Munguira}(1995)}]{munguira_conservation_1995}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Noce}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Caporaso}}, \
-  and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Santini}},\ }\href
-  {\doibase 10.1038/s41597-020-00726-5} {\bibfield  {journal} {\bibinfo
-  {journal} {Scientific Data}\ }\textbf {\bibinfo {volume} {7}},\ \bibinfo
-  {pages} {398} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
-\bibitem [{a1()}]{a1}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~L.}\ \bibnamefont
+  {Munguira}},\ }in\ \href {\doibase 10.1007/978-94-011-1282-6_19}
+  {{\selectlanguage {en}\emph {\bibinfo {booktitle} {Ecology and {Conservation}
+  of {Butterflies}}}}},\ \bibinfo {editor} {edited by\ \bibinfo {editor}
+  {\bibfnamefont {A.~S.}\ \bibnamefont {Pullin}}}\ (\bibinfo  {publisher}
+  {Springer Netherlands},\ \bibinfo {address} {Dordrecht},\ \bibinfo {year}
+  {1995})\ pp.\ \bibinfo {pages} {277--289}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sánchez-Bayo}\ and\ \citenamefont
+  {Wyckhuys}(2019)}]{sanchez-bayo_worldwide_2019}%
   \BibitemOpen
-  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_INSOL_M} {\enquote
-  {\bibinfo {title} {Solar insolation (1 month) | nasa},}\ }\BibitemShut
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Sánchez-Bayo}}\ and\ \bibinfo {author} {\bibfnamefont {K.~A.~G.}\
+  \bibnamefont {Wyckhuys}},\ }\href {\doibase 10.1016/j.biocon.2019.01.020}
+  {\bibfield  {journal} {\bibinfo  {journal} {Biological Conservation}\
+  }\textbf {\bibinfo {volume} {232}},\ \bibinfo {pages} {8} (\bibinfo {year}
+  {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hijmans}\ \emph {et~al.}(2005)\citenamefont
+  {Hijmans}, \citenamefont {Cameron}, \citenamefont {Parra}, \citenamefont
+  {Jones},\ and\ \citenamefont {Jarvis}}]{hijmans_very_2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Hijmans}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Cameron}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Parra}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Jones}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Jarvis}},\ }\href {\doibase
+  10.1002/joc.1276} {\bibfield  {journal} {\bibinfo  {journal} {International
+  Journal of Climatology}\ }\textbf {\bibinfo {volume} {25}},\ \bibinfo {pages}
+  {1965} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{Note1()}]{Note1}%
+  \BibitemOpen
+  \bibinfo {note} {For this paper,}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{QGIS Development Team}}(2022)}]{QGIS_software}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {{QGIS Development
+  Team}}},\ }\href {https://www.qgis.org} {\emph {\bibinfo {title} {QGIS
+  Geographic Information System}}},\ \bibinfo {organization} {QGIS Association}
+  (\bibinfo {year} {2022})\BibitemShut {NoStop}%
+\bibitem [{Note2()}]{Note2}%
+  \BibitemOpen
+  \bibinfo {note} {Https://github.com/E-Aho/Butterfly-Modeling}\BibitemShut
   {NoStop}%
-\bibitem [{b2()}]{b2}%
-  \BibitemOpen
-  \href {https://www2.jpl.nasa.gov/srtm/} {\enquote {\bibinfo {title} {Shuttle
-  radar topography mission},}\ }\BibitemShut {NoStop}%
-\bibitem [{c3()}]{c3}%
-  \BibitemOpen
-  \href {https://www.protectedplanet.net/61401} {\enquote {\bibinfo {title}
-  {Explore the world's protected areas},}\ }\BibitemShut {NoStop}%
-\bibitem [{d4()}]{d4}%
-  \BibitemOpen
-  \href {https://www.protectedplanet.net/785} {\enquote {\bibinfo {title}
-  {Explore the world's protected areas},}\ }\BibitemShut {NoStop}%
-\bibitem [{e5()}]{e5}%
-  \BibitemOpen
-  \href {http://www.naturalearthdata.com/downloads/} {\enquote {\bibinfo
-  {title} {Natural earth vector and raster map},}\ }\BibitemShut {NoStop}%
-\bibitem [{f6()}]{f6}%
-  \BibitemOpen
-  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=MCD12C1_T1} {\enquote
-  {\bibinfo {title} {Land cover classification (1 year) | nasa},}\
-  }\BibitemShut {NoStop}%
-\bibitem [{g7()}]{g7}%
-  \BibitemOpen
-  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_NETFLUX_M}
-  {\enquote {\bibinfo {title} {Net radiation (1 month) | nasa},}\ }\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Donkelaar}\ \emph {et~al.}(2016)\citenamefont
-  {Donkelaar}, \citenamefont {Martin}, \citenamefont {Brauer}, \citenamefont
-  {Hsu}, \citenamefont {Kahn}, \citenamefont {Levy}, \citenamefont {Lyapustin},
-  \citenamefont {Sayer},\ and\ \citenamefont {Winker}}]{h8}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
-  {Donkelaar}}, \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont
-  {Martin}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Brauer}},
-  \bibinfo {author} {\bibfnamefont {N.~C.}\ \bibnamefont {Hsu}}, \bibinfo
-  {author} {\bibfnamefont {R.~A.}\ \bibnamefont {Kahn}}, \bibinfo {author}
-  {\bibfnamefont {R.~C.}\ \bibnamefont {Levy}}, \bibinfo {author}
-  {\bibfnamefont {A.}~\bibnamefont {Lyapustin}}, \bibinfo {author}
-  {\bibfnamefont {A.~M.}\ \bibnamefont {Sayer}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {D.~M.}\ \bibnamefont {Winker}},\ }\href {\doibase
-  10.1021/ACS.EST.5B05833} {\bibfield  {journal} {\bibinfo  {journal}
-  {Environmental Science and Technology}\ }\textbf {\bibinfo {volume} {50}},\
-  \bibinfo {pages} {3762} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Brose}\ \emph {et~al.}(2003)\citenamefont {Brose},
-  \citenamefont {Martinez},\ and\ \citenamefont {Williams}}]{Brose2003}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {U.}~\bibnamefont
-  {Brose}}, \bibinfo {author} {\bibfnamefont {N.~D.}\ \bibnamefont {Martinez}},
-  \ and\ \bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont {Williams}},\
-  }\href {http://www.jstor.org/stable/3450141} {\bibfield  {journal} {\bibinfo
-  {journal} {Ecology}\ }\textbf {\bibinfo {volume} {84}},\ \bibinfo {pages}
-  {2364} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Brown}\ \emph {et~al.}(2012)\citenamefont {Brown},
   \citenamefont {Pocock}, \citenamefont {Zhao},\ and\ \citenamefont
   {Luján}}]{Brown2012}%
@@ -232,11 +327,13 @@
   {http://jmlr.org/papers/v13/brown12a.html} {\bibfield  {journal} {\bibinfo
   {journal} {Journal of Machine Learning Research}\ }\textbf {\bibinfo {volume}
   {13}},\ \bibinfo {pages} {27} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
-\bibitem [{Dan()}]{Daniel}%
+\bibitem [{\citenamefont {Yang}\ and\ \citenamefont
+  {Moody}(2012)}]{yang_data_2012}%
   \BibitemOpen
-  \href
-  {https://danielhomola.com/feature%20selection/phd/mifs-parallelized-mutual-information-based-feature-selection-module/#the-second-problem}
-  {\enquote {\bibinfo {title} {Mifs - daniel homola},}\ }\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~H.}\ \bibnamefont
+  {Yang}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Moody}},\
+  }\href@noop {} {\ ,\ \bibinfo {pages} {7} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ross}(2014)}]{Ross2014}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~C.}\ \bibnamefont
@@ -244,66 +341,66 @@
   {journal} {\bibinfo  {journal} {PLoS ONE}\ }\textbf {\bibinfo {volume} {9}}
   (\bibinfo {year} {2014}),\ 10.1371/JOURNAL.PONE.0087357}\BibitemShut
   {NoStop}%
-\bibitem [{i9()}]{i9}%
+\bibitem [{Hom()}]{Homola2016}%
   \BibitemOpen
-  \href {https://gist.github.com/GaelVaroquaux/ead9898bd3c973c40429} {\enquote
-  {\bibinfo {title} {Estimating entropy and mutual information},}\
-  }\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Rueda-M}\ \emph {et~al.}(2021)\citenamefont
-  {Rueda-M}, \citenamefont {Salgado-Roa}, \citenamefont {Gantiva-Q},
-  \citenamefont {Pardo-Díaz},\ and\ \citenamefont
-  {Salazar}}]{rueda-m_environmental_2021}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
-  {Rueda-M}}, \bibinfo {author} {\bibfnamefont {F.~C.}\ \bibnamefont
-  {Salgado-Roa}}, \bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont
-  {Gantiva-Q}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Pardo-Díaz}}, \ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Salazar}},\ }\href
-  {https://www.frontiersin.org/article/10.3389/fevo.2021.750703} {\bibfield
-  {journal} {\bibinfo  {journal} {Frontiers in Ecology and Evolution}\ }\textbf
-  {\bibinfo {volume} {9}} (\bibinfo {year} {2021})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Afshar}\ and\ \citenamefont
-  {Usefi}(2021)}]{afshar_dimensionality_2021}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Afshar}}\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Usefi}},\
-  }\href {\doibase 10.1038/s41598-021-83150-y} {\bibfield  {journal} {\bibinfo
-  {journal} {Scientific Reports}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo
-  {pages} {3832} (\bibinfo {year} {2021})},\ \bibinfo {note} {bandiera\_abtest:
-  a Cc\_license\_type: cc\_by Cg\_type: Nature Research Journals Number: 1
-  Primary\_atype: Research Publisher: Nature Publishing Group Subject\_term:
-  Cancer;Computational biology and bioinformatics;Genetics;Mathematics and
-  computing Subject\_term\_id:
-  cancer;computational-biology-and-bioinformatics;genetics;mathematics-and-computing}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Gross}\ \emph {et~al.}(2007)\citenamefont {Gross},
-  \citenamefont {Kalendra}, \citenamefont {Hudgens},\ and\ \citenamefont
-  {Haddad}}]{gross_robustness_2007}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
-  {Gross}}, \bibinfo {author} {\bibfnamefont {E.~J.}\ \bibnamefont {Kalendra}},
-  \bibinfo {author} {\bibfnamefont {B.~R.}\ \bibnamefont {Hudgens}}, \ and\
-  \bibinfo {author} {\bibfnamefont {N.~M.}\ \bibnamefont {Haddad}},\ }\href
-  {\doibase 10.1007/s10144-007-0034-8} {\bibfield  {journal} {\bibinfo
-  {journal} {Population Ecology}\ }\textbf {\bibinfo {volume} {49}},\ \bibinfo
-  {pages} {191} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Gao}\ \emph {et~al.}(2016)\citenamefont {Gao},
-  \citenamefont {Steeg},\ and\ \citenamefont
-  {Galstyan}}]{gao_variational_2016}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Gao}}, \bibinfo {author} {\bibfnamefont {G.~V.}\ \bibnamefont {Steeg}}, \
-  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Galstyan}},\ }\href
-  {http://arxiv.org/abs/1606.02827} {\bibfield  {journal} {\bibinfo  {journal}
-  {arXiv:1606.02827 [cs, stat]}\ } (\bibinfo {year} {2016})},\ \bibinfo {note}
-  {arXiv: 1606.02827}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Kalmar}\ and\ \citenamefont
-  {Currie}(2007)}]{kalmar_unified_2007}%
+  \href
+  {https://danielhomola.com/feature%20selection/phd/mifs-parallelized-mutual-information-based-feature-selection-module/#the-second-problem}
+  {\enquote {\bibinfo {title} {Mifs - daniel homola},}\ }\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kraskov}\ \emph {et~al.}(2004)\citenamefont
+  {Kraskov}, \citenamefont {Stoegbauer},\ and\ \citenamefont
+  {Grassberger}}]{kraskov_estimating_2004}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Kalmar}}\ and\ \bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
-  {Currie}},\ }\href {\doibase 10.1890/06-1368} {\bibfield  {journal} {\bibinfo
-   {journal} {Ecology}\ }\textbf {\bibinfo {volume} {88}},\ \bibinfo {pages}
-  {1309} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+  {Kraskov}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Stoegbauer}},
+  \ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Grassberger}},\
+  }\href {\doibase 10.1103/PhysRevE.69.066138} {\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review E}\ }\textbf {\bibinfo {volume} {69}},\ \bibinfo
+  {pages} {066138} (\bibinfo {year} {2004})},\ \bibinfo {note} {arXiv:
+  cond-mat/0305641}\BibitemShut {NoStop}%
+\bibitem [{Note3()}]{Note3}%
+  \BibitemOpen
+  \bibinfo {note} {Https://github.com/E-Aho/Butterfly-Modeling}\BibitemShut
+  {NoStop}%
+\bibitem [{nas(2022{\natexlab{a}})}]{nasa_insol}%
+  \BibitemOpen
+  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_INSOL_M}
+  {{\selectlanguage {en}\enquote {\bibinfo {title} {Solar {Insolation} (1
+  month) {\textbar} {NASA}},}\ }} (\bibinfo {year} {2022}{\natexlab{a}}),\
+  \bibinfo {note} {publisher: NASA Earth Observations (NEO)}\BibitemShut
+  {NoStop}%
+\bibitem [{nas(2022{\natexlab{b}})}]{nasa_netflux}%
+  \BibitemOpen
+  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=CERES_NETFLUX_M}
+  {{\selectlanguage {en}\enquote {\bibinfo {title} {Net {Radiation} (1 month)
+  {\textbar} {NASA}},}\ }} (\bibinfo {year} {2022}{\natexlab{b}}),\ \bibinfo
+  {note} {publisher: NASA Earth Observations (NEO)}\BibitemShut {NoStop}%
+\bibitem [{nas(2022{\natexlab{c}})}]{nasa_landcov}%
+  \BibitemOpen
+  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=MCD12C1_T1}
+  {{\selectlanguage {en}\enquote {\bibinfo {title} {Land {Cover}
+  {Classification} (1 year) {\textbar} {NASA}},}\ }} (\bibinfo {year}
+  {2022}{\natexlab{c}}),\ \bibinfo {note} {publisher: NASA Earth Observations
+  (NEO)}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {van Donkelaar}\ \emph {et~al.}(2016)\citenamefont
+  {van Donkelaar}, \citenamefont {Martin}, \citenamefont {Brauer},
+  \citenamefont {Hsu}, \citenamefont {Kahn}, \citenamefont {Levy},
+  \citenamefont {Lyapustin}, \citenamefont {Sayer},\ and\ \citenamefont
+  {Winker}}]{van_donkelaar_global_2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {van
+  Donkelaar}}, \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont
+  {Martin}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Brauer}},
+  \bibinfo {author} {\bibfnamefont {N.~C.}\ \bibnamefont {Hsu}}, \bibinfo
+  {author} {\bibfnamefont {R.~A.}\ \bibnamefont {Kahn}}, \bibinfo {author}
+  {\bibfnamefont {R.~C.}\ \bibnamefont {Levy}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Lyapustin}}, \bibinfo {author}
+  {\bibfnamefont {A.~M.}\ \bibnamefont {Sayer}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {D.~M.}\ \bibnamefont {Winker}},\ }\href {\doibase
+  10.1021/acs.est.5b05833} {\bibfield  {journal} {\bibinfo  {journal}
+  {Environmental Science \& Technology}\ }\textbf {\bibinfo {volume} {50}},\
+  \bibinfo {pages} {3762} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{nas()}]{nasa_srtm}%
+  \BibitemOpen
+  \href {https://www2.jpl.nasa.gov/srtm/world.htm} {\enquote {\bibinfo {title}
+  {Shuttle {Radar} {Topography} {Mission}},}\ }\BibitemShut {NoStop}%
 \end{thebibliography}%

@@ -259,7 +259,7 @@ def main_entrypoint():
     input_df = get_inputs(filename=args.file)
     input_df.sort_index()
 
-    label_col = "logSpeciesDensity"
+    label_col = "log(species)/log(area)"
     non_feature_cols = [label_col, "Country", "SpeciesDensity"]
 
     label = input_df[label_col]

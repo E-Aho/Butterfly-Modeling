@@ -10,7 +10,17 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ButterflyRichnessPaperNotes.bib
+I was expecting a `,' or a `}'---line 1 of file ButterflyRichnessPaperNotes.bib
+ : @footnote{Note1,key="Note1",note="For this paper, "
+ :                                                    Urban" was defined as the "Urban and Built Up" category in the Nasa Land Cover Classification, "Developed" was defined as Croplands, Urban, and Croplands & Vegetation, and "Natural Vegetation" was defined as any forest type, any shrublands, any savannas, grasslands, and wetlands"}
+I'm skipping whatever remains of this entry
 Database file #2: Bibliography.bib
+Repeated entry---line 852 of file Bibliography.bib
+ : @article{white_human_2007
+ :                          ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "fick_wordlclim_2017"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
 Control: key (0) 
@@ -20,54 +30,49 @@ Control: production of article title (-1) disabled
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
-Warning--empty year in a1
-Warning--empty year in b2
-Warning--empty year in c3
-Warning--empty year in d4
-Warning--empty year in e5
-Warning--empty year in f6
-Warning--empty year in g7
-Warning--empty year in Daniel
-Warning--empty year in i9
-You've used 29 entries,
+Warning--missing journal in john_wiley__sons_ltd_species_2007
+Warning--missing journal in yang_data_2012
+Warning--empty year in Homola2016
+Warning--empty year in nasa_srtm
+You've used 37 entries,
             5847 wiz_defined-function locations,
-            1821 strings with 21673 characters,
-and the built_in function-call counts, 24351 in all, are:
-= -- 1604
-> -- 590
-< -- 148
-+ -- 208
-- -- 142
-* -- 3725
-:= -- 2442
-add.period$ -- 38
-call.type$ -- 29
-change.case$ -- 127
-chr.to.int$ -- 29
-cite$ -- 56
-duplicate$ -- 2280
-empty$ -- 1823
-format.name$ -- 346
-if$ -- 4772
-int.to.chr$ -- 1
-int.to.str$ -- 37
-missing$ -- 275
-newline$ -- 139
-num.names$ -- 60
-pop$ -- 1030
+            1896 strings with 24014 characters,
+and the built_in function-call counts, 33320 in all, are:
+= -- 2206
+> -- 850
+< -- 209
++ -- 286
+- -- 204
+* -- 5188
+:= -- 3300
+add.period$ -- 42
+call.type$ -- 37
+change.case$ -- 166
+chr.to.int$ -- 41
+cite$ -- 51
+duplicate$ -- 3093
+empty$ -- 2450
+format.name$ -- 497
+if$ -- 6586
+int.to.chr$ -- 3
+int.to.str$ -- 45
+missing$ -- 383
+newline$ -- 163
+num.names$ -- 89
+pop$ -- 1286
 preamble$ -- 1
-purify$ -- 136
+purify$ -- 180
 quote$ -- 0
-skip$ -- 874
+skip$ -- 1188
 stack$ -- 0
-substring$ -- 586
-swap$ -- 2059
-text.length$ -- 71
+substring$ -- 823
+swap$ -- 2906
+text.length$ -- 103
 text.prefix$ -- 0
 top$ -- 8
-type$ -- 390
-warning$ -- 9
-while$ -- 56
+type$ -- 510
+warning$ -- 4
+while$ -- 90
 width$ -- 0
-write$ -- 260
-(There were 9 warnings)
+write$ -- 332
+(There were 2 error messages)
