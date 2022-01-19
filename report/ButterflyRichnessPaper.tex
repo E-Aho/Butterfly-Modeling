@@ -17,7 +17,9 @@
 \usepackage{float}
 %\usepackage{tabstackengine}
 \usepackage{enumerate}   
-
+\usepackage{caption}
+\captionsetup[table]{skip = 1pt}
+\captionsetup[figure]{skip = 1pt}
 
 \begin{document}
 
@@ -80,45 +82,46 @@ Yang and Moody (1999) and Meyer et al. (2008) proposed JMI in an effort to reduc
 One major difficulty in implementing a information based feature selection method is that entropy (and therefore information) for continuous variables is not as simple to calculate as it is for discrete variables. B. Ross\cite{Ross2014} and D. Homola \cite{Homola2016} championed a kNN-based approach to estimating shared information, advancing work done by Kraskov et al in 2004\cite{kraskov_estimating_2004}. This method avoids needing to bin continuous data by using k-nearest neighbour distances to estimate entropy instead, which we made use of in our implementation. For further details on how our implementation works, the code is available on Github \footnote{https://github.com/E-Aho/Butterfly-Modeling}.
 
 
-\noindent {\bf\em Results.--}\begin{center}\begin{tabular}{||c c||}
- \hline
-First 10 Features & Information Gain \\
- \hline\hline
- Mean temperature seasonality & 0.801\\ 
- \hline
- Mean precipitation of driest month & 1.04\\
-  \hline
- Mean precipitation of warmest quarter &  1.01\\
- \hline
- Mean max temperature of warmest month &  0.957\\
- \hline
- Mean diurnal range & 0.949\\
- \hline
- Precipitation of wettest quarter & 0.913\\
- \hline
- Annual precipitation & 0.876\\
- \hline
- Latitude & 0.861\\
- \hline
- Annual mean Temperature & 0.854\\
- \hline 
- Annual insolation & 0.848\\[1ex]
+\noindent {\bf\em Results.--}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| c |  c |}
 \hline
+Feature & Information Gain $/$ shannons \\
+\hline
+Temp. seasonality & 0.801\\ 
+Precip. of driest month & 1.04\\
+Precip. of warmest quarter &  1.01\\
+Max temp. of warmest month &  0.957\\
+Diurnal temp. range & 0.949\\
+Precip. of wettest quarter & 0.913\\
+Annual precip. & 0.876\\
+Latitude & 0.861\\
+Annual mean temp. & 0.854\\
+Annual insolation & 0.848\\
+\hline
+
 \end{tabular}
 \end{center}
+\caption{A table showing the first 10 sequentially selected features and their respective information gains }
+\end{table}
 
 The result of the JMI feature selection algorithm highlighted a set of features that have an optimal information gain with the target variable of this paper, $log(species \: count)/log(area)$. The mean temperature seasonality was the first feature selected by the algorithm. This means that when we took each feature and the target variable, this feature had the highest amount of information gain. The full table of all sequentially selected features and their information gains are given in Appendix B.
 
-\begin{center}\includegraphics[width=240pt]{Features.pdf}\end{center}
+\begin{figure}
+	\caption{A plot showing incremental information gain for each feature added to the selected feature set}
+	\centering
+\includegraphics[width=240pt]{Features.pdf}
+\end{figure}
 
 \noindent {\bf\em Discussion.--}
-As we can see from the above plot, adding the second feature (precipitation in the driest month) added significantly more information than the first variable did alone. This shows that seasonality and the precipitation in the driest month together hold extra information about our target variable than either did separately. Precipitation is also known to be one of the most important environmental factors for butterflies\cite{rueda-m_environmental_2021}, so seeing seasonal precipitation features be among the most informative in our dataset make sense.
+As we can see from Fig 1, adding the second feature (precipitation in the driest month) added significantly more information than the first variable did alone. This shows that seasonality and the precipitation in the driest month together hold extra information about our target variable than either did separately. Precipitation is also known to be one of the most important environmental factors for butterflies\cite{rueda-m_environmental_2021}, so seeing seasonal precipitation features be among the most informative in our dataset make sense.
 
 After adding the second feature, successive additions result in less information gain. This is indicative of increasing amounts of redundancy in our dataset. It should be noted that each feature is still increasing the total amount of information within our selected set, but that some of the information is already accounted for in other variables already selected (e.g mean temperature in the summer has a large amount of redundancy with annual max temperature).
 
-It is interesting to consider the correlation of the variables and the species density along with their order of selection. From the original list of features, the mean minimum temperature of the coldest month had the highest correlation with the species density, but it was selected second last. The next highest correlated feature was mean annual precipitation, which was selected 7th by our algorithm. This emphasises the difference between information gain and correlation, as the most informative feature may not be correlated well if the relationship is non-linear.
+It is interesting to consider the correlation of the variables and the species density along with their order of selection. From the original list of features, the mean minimum temperature of the coldest month had the highest correlation with the species density, but it was selected second last. This emphasises the difference between information gain and correlation, as the most informative feature may not be correlated well if the relationship is non-linear.
 
-Among the features we looked at which were intended to investigate anthropogenic effects (PM 2.5 concentration \& land usage percentages), PM 2.5 was the most informative, and was selected 17th. While it is interesting to note that our anthropogenic variables were not found to be particularly informative, this may be an artefact of our methodology. Due to the majority of our regions being large in area (country sized), and the nature of local human effects typically being short ranged (habitat destruction, air pollution, etc) \cite{he_urban_2014}, it is likely climatological variables were more important at the wide scale of our regions. Further research is needed at with smaller scaled regions, and a larger number of observations, to better identify how butterfly species richness interacts with these features. 
+Among the features we looked at which were intended to investigate anthropogenic effects (PM 2.5 concentration \& land usage percentages), PM 2.5 was the most informative, and was selected 17th. While it is interesting to note that our anthropogenic variables were not found to be particularly informative, this may be an artefact of our methodology. Due to the majority of our regions being large in area (country sized), and the nature of local human effects typically being short ranged (habitat destruction, air pollution, etc) \cite{he_urban_2014}, we would expect climatological variables to be more important at the wide scale of our regions. Further research is needed at with smaller scaled regions, and a larger number of observations, to better identify how butterfly species richness interacts with these features. 
 
 However we should also note that wide scale climate change brought about by human actions has already been shown to affect precipitation and temperature patterns\cite{trenberth_changes_2011, ashton_effects_2009}, and that butterflies in particular are sensitive to changes in temperature extremes that relate to seasonality\cite{bauerfeind_simulating_2014}. Given that our most informative features on butterfly species richness are all rapidly changing year on year as a result of anthropogenic climate change\cite{loarie_velocity_2009}, it is clear that butterfly species richness will be sensitive to future changes in these features. 
 
@@ -129,7 +132,7 @@ One must also consider the flaws in the JMI algorithm. Critics of the JMI algori
 An interestingly unimportant feature is that of the Island boolean tag, which did not show significant information gains, being the last selected feature, and having an information gain of just 0.373 shannons, compared to 0.533 shannons for the penultimate feature. This follows the findings of Kalmar and Currie in Avian species\cite{kalmar_unified_2007}. Kalmar and Currie found that most variation in species density is not context-specific, and varied similarly on continents and islands according to the same bioclimatic indices. Our findings seem to agree, and find that whether an area is an island or not does not add significant information to the dataset, and so is not particularly relevant to the species richness in butterflies.
 
 \noindent {\bf\em Conclusion.--}
-Overall, we have been successful in reducing the original 28 features to a small subset of informative features for butterfly species richness. These findings can be used to help identify areas to focus conservation efforts on. However, they highlight that the list of features that affect butterfly richness is complex and that many connections exist between these variables. We hope that these findings might help inform conservation efforts by combining them with climatic predictions to identify areas that are most at risk of biodiversity loss in butterflies.
+Overall, we have been successful in reducing the original 28 features to a small subset of informative features for butterfly species richness. These findings can be used to help identify areas to focus conservation efforts on. Future research should aim to verify our findings are replicable at different scales, and with more observations. We hope that our findings might help inform conservation efforts by combining them with climatic predictions to identify areas that are most at risk of biodiversity loss in butterflies.
 
 \bibliography{Bibliography}
 \bibliographystyle{apsrev4-1}
@@ -195,69 +198,45 @@ The 28 features examined in our method were the following:
 \end{itemize}
 
 \section{Appendix B: Full Results Table} \label{appendix:results}
-\noindent {\bf\em Results.--} 
-\begin{center}\begin{tabular}{||c c||}
- \hline
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{| c |  c |}
+\hline
 Sequential features selected & Information Gain $/$ shannons \\
- \hline\hline
+ \hline
  Mean temperature seasonality & 0.801\\ 
- \hline
  Mean precipitation of driest month & 1.04\\
- \hline
  Mean precipitation of warmest quarter &  1.01\\
- \hline
  Mean max temperature of warmest month &  0.957\\
- \hline
  Mean diurnal temperature range & 0.949\\
- \hline
  Precipitation of wettest quarter & 0.913\\
- \hline
  Annual precipitation & 0.876\\
- \hline
  Latitude & 0.861\\
- \hline
  Annual mean Temperature & 0.854\\
- \hline 
  Annual insolation & 0.848\\ 
- \hline
  Isothermality & 0.845\\
- \hline
  Temperature annual range & 0.839\\
- \hline
  Mean temperature of wettest quarter & 0.839\\
- \hline
  Precipitation of driest quarter & 0.823\\
- \hline
  Mean temperature of driest quarter & 0.802\\
- \hline
  Precipitation of wettest month & 0.798\\
- \hline
  PM 2.5 Concentration & 0.789\\
- \hline
  Precipitation seasonality & 0.767\\
- \hline
  Net Flux & 0.764\\
- \hline
  Percent Developed & 0.758\\
- \hline
  Precipitation of coldest quarter & 0.743\\
- \hline
  Mean temperature of coldest quarter & 0.739\\
- \hline
  Mean temperature of warmest quarter & 0.718\\
- \hline
  Percent Urbanized & 0.711\\
- \hline
  Elevation & 0.661\\
- \hline
  Percent Naturally Vegetated & 0.639\\
- \hline
  Minimum temperature of coldest month & 0.533\\
+ Island & 0.373\\
  \hline
- Island & 0.373\\[1ex]
- \hline
- 
 \end{tabular}
 \end{center}
+\caption{A table showing the each sequentially selected features and their respective information gains}
+\end{table}
 
 \end{document}
