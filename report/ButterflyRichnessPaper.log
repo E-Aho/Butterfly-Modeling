@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.4)  19 JAN 2022 11:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.4)  19 JAN 2022 12:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -923,6 +923,11 @@ Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 21.
 Class revtex4-1 Warning: Assuming \noaffiliation for authors.
 
 [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package natbib Warning: Citation `yang_data_2012' on page 2 undefined on input 
+line 65.
+
+
 Underfull \hbox (badness 1412) in paragraph at lines 65--66
 []\OT1/cmr/m/n/10 Choosing a se-lec-tion cri-te-rion is non-trivial, and
  []
@@ -932,7 +937,7 @@ Overfull \hbox (27.90334pt too wide) in paragraph at lines 83--108
  []$ 
  []
 
-<Features.pdf, id=91, 233.56532pt x 178.60864pt>
+<Features.pdf, id=89, 233.56532pt x 178.60864pt>
 File: Features.pdf Graphic file (type pdf)
 <use Features.pdf>
 Package pdftex.def Info: Features.pdf  used on input line 112.
@@ -980,61 +985,64 @@ Underfull \hbox (badness 1867) in paragraph at lines 226--233
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 340--344
+Underfull \hbox (badness 1527) in paragraph at lines 330--334
  []\OT1/cmr/m/n/9 B. C. Ross, []PLoS ONE \OT1/cmr/bx/n/9 9 \OT1/cmr/m/n/9 (2014
 ), 10.1371/JOUR-
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 385--391
+Underfull \hbox (badness 3375) in paragraph at lines 377--383
  []\OT1/cmr/m/n/9 C. He, Z. Liu, J. Tian,  and Q. Ma, []Global
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--391
+Underfull \hbox (badness 10000) in paragraph at lines 377--383
  \OT1/cmr/m/n/9 Change Bi-ol-ogy \OT1/cmr/bx/n/9 20\OT1/cmr/m/n/9 , 2886 (2014)
 [], []eprint:
  []
 
 
-Overfull \hbox (13.75801pt too wide) in paragraph at lines 385--391
+Overfull \hbox (13.75801pt too wide) in paragraph at lines 377--383
  \OT1/cmr/m/n/9 https://onlinelibrary.wiley.com/doi/pdf/10.1111/gcb.12553. 
  []
 
 
-Underfull \hbox (badness 5970) in paragraph at lines 404--411
+Underfull \hbox (badness 5970) in paragraph at lines 396--403
  []\OT1/cmr/m/n/9 S. Ash-ton, D. Guti^^Serrez,  and R. J. Wil-son,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--411
+Underfull \hbox (badness 10000) in paragraph at lines 396--403
  []\OT1/cmr/m/n/9 Eco-log-i-cal En-to-mol-ogy \OT1/cmr/bx/n/9 34\OT1/cmr/m/n/9 
 , 437 (2009)[], []eprint:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--411
+Underfull \hbox (badness 10000) in paragraph at lines 396--403
  \OT1/cmr/m/n/9 https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-86.
+78.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 486.
-) [4] [5] [6]
-(./ButterflyRichnessPaper.aux)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 478.
+) [4] [5]
+
+Package natbib Warning: There were undefined citations.
+
+[6] (./ButterflyRichnessPaper.aux)
 Package rerunfilecheck Info: File `ButterflyRichnessPaper.out' has not changed.
 
 (rerunfilecheck)             Checksum: 203A93F2C4927A4D539F5FA58B34B569;1061.
  ) 
 Here is how much of TeX's memory you used:
- 24760 strings out of 478994
- 425900 string characters out of 5858185
- 818490 words of memory out of 5000000
- 41709 multiletter control sequences out of 15000+600000
+ 24752 strings out of 478994
+ 425766 string characters out of 5858185
+ 816390 words of memory out of 5000000
+ 41703 multiletter control sequences out of 15000+600000
  411841 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,6n,88p,3254b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1054,10 +1062,10 @@ xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texliv
 e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on ButterflyRichnessPaper.pdf (6 pages, 263455 bytes).
+Output written on ButterflyRichnessPaper.pdf (6 pages, 263534 bytes).
 PDF statistics:
- 339 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
- 78 named destinations out of 1000 (max. 500000)
+ 335 PDF objects out of 1000 (max. 8388607)
+ 306 compressed objects within 4 object streams
+ 76 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

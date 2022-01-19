@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{48}%
+\begin{thebibliography}{46}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -229,10 +229,10 @@
   \bibinfo {pages} {2482} (\bibinfo {year} {1998})},\ \bibinfo {note}
   {https://doi.org/10.1890/0012-9658(1998)079[2482:AETORS]2.0.CO;2}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {SANCHEZ-RODRIGUEZ}\ and\ \citenamefont
+\bibitem [{\citenamefont {Sanchez-Roduigez}\ and\ \citenamefont
   {Baz}(1995)}]{Arturo}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibnamefont {SANCHEZ-RODRIGUEZ}}\
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Sanchez-Roduigez}}\
   and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Baz}},\ }\href@noop
   {} {\bibfield  {journal} {\bibinfo  {journal} {Journal of the Lepidopterist'
   Society,}\ }\textbf {\bibinfo {volume} {49}},\ \bibinfo {pages} {192}
@@ -303,16 +303,13 @@
   10.1002/joc.1276} {\bibfield  {journal} {\bibinfo  {journal} {International
   Journal of Climatology}\ }\textbf {\bibinfo {volume} {25}},\ \bibinfo {pages}
   {1965} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
-\bibitem [{Note1()}]{Note1}%
-  \BibitemOpen
-  \bibinfo {note} {For this paper,}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {{QGIS Development Team}}(2022)}]{QGIS_software}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibnamefont {{QGIS Development
   Team}}},\ }\href {https://www.qgis.org} {\emph {\bibinfo {title} {QGIS
   Geographic Information System}}},\ \bibinfo {organization} {QGIS Association}
   (\bibinfo {year} {2022})\BibitemShut {NoStop}%
-\bibitem [{Note2()}]{Note2}%
+\bibitem [{Note1()}]{Note1}%
   \BibitemOpen
   \bibinfo {note} {Https://github.com/E-Aho/Butterfly-Modeling}\BibitemShut
   {NoStop}%
@@ -327,13 +324,6 @@
   {http://jmlr.org/papers/v13/brown12a.html} {\bibfield  {journal} {\bibinfo
   {journal} {Journal of Machine Learning Research}\ }\textbf {\bibinfo {volume}
   {13}},\ \bibinfo {pages} {27} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Yang}\ and\ \citenamefont
-  {Moody}(2012)}]{yang_data_2012}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~H.}\ \bibnamefont
-  {Yang}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Moody}},\
-  }\href@noop {} {\ ,\ \bibinfo {pages} {7} (\bibinfo {year}
-  {2012})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ross}(2014)}]{Ross2014}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~C.}\ \bibnamefont
@@ -341,11 +331,13 @@
   {journal} {\bibinfo  {journal} {PLoS ONE}\ }\textbf {\bibinfo {volume} {9}}
   (\bibinfo {year} {2014}),\ 10.1371/JOURNAL.PONE.0087357}\BibitemShut
   {NoStop}%
-\bibitem [{Hom()}]{Homola2016}%
+\bibitem [{\citenamefont {Homola}(2016)}]{Homola2016}%
   \BibitemOpen
-  \href
-  {https://danielhomola.com/feature%20selection/phd/mifs-parallelized-mutual-information-based-feature-selection-module/#the-second-problem}
-  {\enquote {\bibinfo {title} {Mifs - daniel homola},}\ }\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Homola}},\ }\href
+  {https://danielhomola.com/feature%20selection/phd/mifs-parallelized-mutual-information-based-feature-selection-module/}
+  {\enquote {\bibinfo {title} {{MIFS}},}\ } (\bibinfo {year}
+  {2016})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kraskov}\ \emph {et~al.}(2004)\citenamefont
   {Kraskov}, \citenamefont {Stoegbauer},\ and\ \citenamefont
   {Grassberger}}]{kraskov_estimating_2004}%
@@ -357,7 +349,7 @@
   {journal} {Physical Review E}\ }\textbf {\bibinfo {volume} {69}},\ \bibinfo
   {pages} {066138} (\bibinfo {year} {2004})},\ \bibinfo {note} {arXiv:
   cond-mat/0305641}\BibitemShut {NoStop}%
-\bibitem [{Note3()}]{Note3}%
+\bibitem [{Note2()}]{Note2}%
   \BibitemOpen
   \bibinfo {note} {Https://github.com/E-Aho/Butterfly-Modeling}\BibitemShut
   {NoStop}%
@@ -516,8 +508,10 @@
   10.1021/acs.est.5b05833} {\bibfield  {journal} {\bibinfo  {journal}
   {Environmental Science \& Technology}\ }\textbf {\bibinfo {volume} {50}},\
   \bibinfo {pages} {3762} (\bibinfo {year} {2016})}\BibitemShut {NoStop}%
-\bibitem [{nas()}]{nasa_srtm}%
+\bibitem [{nas(2022{\natexlab{d}})}]{nasa_srtm}%
   \BibitemOpen
-  \href {https://www2.jpl.nasa.gov/srtm/world.htm} {\enquote {\bibinfo {title}
-  {Shuttle {Radar} {Topography} {Mission}},}\ }\BibitemShut {NoStop}%
+  \href {https://neo.gsfc.nasa.gov/view.php?datasetId=SRTM_RAMP2_TOPO}
+  {\enquote {\bibinfo {title} {Topography {\textbar} {NASA}},}\ } (\bibinfo
+  {year} {2022}{\natexlab{d}}),\ \bibinfo {note} {publisher: NASA Earth
+  Observations (NEO)}\BibitemShut {NoStop}%
 \end{thebibliography}%
