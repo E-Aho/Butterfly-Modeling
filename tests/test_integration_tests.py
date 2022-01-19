@@ -22,7 +22,7 @@ class TestComputeBestFeatures:
         ]), columns=["a", "b", "c"],
         )
 
-        output_feat, output_info = compute_best_features(label=label, features=features, produce_plots=False)
+        output_feat, output_info = compute_best_features(label=label, feature_array=features, produce_plots=False)
 
         # Checking features returned as expected
         assert output_feat == ["c", "b", "a"]

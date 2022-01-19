@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{46}%
+\begin{thebibliography}{51}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -105,10 +105,8 @@
   {White}}\ and\ \bibinfo {author} {\bibfnamefont {J.~T.}\ \bibnamefont
   {Kerr}},\ }\href {\doibase 10.1111/j.1466-8238.2007.00298.x} {\bibfield
   {journal} {\bibinfo  {journal} {Global Ecology and Biogeography}\ }\textbf
-  {\bibinfo {volume} {16}},\ \bibinfo {pages} {290} (\bibinfo {year} {2007})},\
-  \bibinfo {note} {\_eprint:
-  https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1466-8238.2007.00298.x}\BibitemShut
-  {NoStop}%
+  {\bibinfo {volume} {16}},\ \bibinfo {pages} {290} (\bibinfo {year}
+  {2007})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Montgomery}\ \emph {et~al.}(2020)\citenamefont
   {Montgomery}, \citenamefont {Dunn}, \citenamefont {Fox}, \citenamefont
   {Jongejans}, \citenamefont {Leather}, \citenamefont {Saunders}, \citenamefont
@@ -156,16 +154,13 @@
   {\bibinfo  {journal} {Encyclopedia of Biodiversity}\ }\textbf {\bibinfo
   {volume} {5}},\ \bibinfo {pages} {397} (\bibinfo {year} {2001})}\BibitemShut
   {NoStop}%
-\bibitem [{\citenamefont {Drakare}\ \emph {et~al.}(2006)\citenamefont
-  {Drakare}, \citenamefont {Lennon},\ and\ \citenamefont
-  {Hillebrand}}]{Drakare2006}%
+\bibitem [{dra()}]{drakare_impint_2006}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
-  {Drakare}}, \bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont {Lennon}},
-  \ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Hillebrand}},\
-  }\href {\doibase 10.1111/J.1461-0248.2005.00848.X} {\bibfield  {journal}
-  {\bibinfo  {journal} {Ecology letters}\ }\textbf {\bibinfo {volume} {9}},\
-  \bibinfo {pages} {215} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+  \href
+  {https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1461-0248.2005.00848.x}
+  {\enquote {\bibinfo {title} {The imprint of the geographical, evolutionary
+  and ecological context on species–area relationships - {Drakare} - 2006 -
+  {Ecology} {Letters} - {Wiley} {Online} {Library}},}\ }\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Brown}\ \emph {et~al.}(2007)\citenamefont {Brown},
   \citenamefont {Jacobs},\ and\ \citenamefont
   {Peet}}]{john_wiley__sons_ltd_species_2007}%
@@ -197,9 +192,7 @@
   {\bibfnamefont {J.~R.~G.}\ \bibnamefont {Turner}},\ }\href {\doibase
   10.1890/03-8006} {\bibfield  {journal} {\bibinfo  {journal} {Ecology}\
   }\textbf {\bibinfo {volume} {84}},\ \bibinfo {pages} {3105} (\bibinfo {year}
-  {2003})},\ \bibinfo {note} {\_eprint:
-  https://onlinelibrary.wiley.com/doi/pdf/10.1890/03-8006}\BibitemShut
-  {NoStop}%
+  {2003})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Currie}(1991)}]{currie_energy_1991}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
@@ -218,17 +211,14 @@
   {012041} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Fleishman}\ \emph {et~al.}(1998)\citenamefont
   {Fleishman}, \citenamefont {Austin},\ and\ \citenamefont
-  {Weiss}}]{Fleishman1998}%
+  {Weiss}}]{fleishman_empirical_1998}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Fleishman}}, \bibinfo {author} {\bibfnamefont {G.~T.}\ \bibnamefont
-  {Austin}}, \ and\ \bibinfo {author} {\bibfnamefont {A.~D.}\ \bibnamefont
-  {Weiss}},\ }\href {\doibase
-  https://doi.org/10.1890/0012-9658(1998)079[2482:AETORS]2.0.CO;2} {\bibfield
+  {Fleishman}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Austin}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Weiss}},\ }\href
+  {\doibase 10.1890/0012-9658(1998)079[2482:AETORS]2.0.CO;2} {\bibfield
   {journal} {\bibinfo  {journal} {Ecology}\ }\textbf {\bibinfo {volume} {79}},\
-  \bibinfo {pages} {2482} (\bibinfo {year} {1998})},\ \bibinfo {note}
-  {https://doi.org/10.1890/0012-9658(1998)079[2482:AETORS]2.0.CO;2}\BibitemShut
-  {NoStop}%
+  \bibinfo {pages} {2482} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Sanchez-Roduigez}\ and\ \citenamefont
   {Baz}(1995)}]{Arturo}%
   \BibitemOpen
@@ -309,6 +299,24 @@
   Team}}},\ }\href {https://www.qgis.org} {\emph {\bibinfo {title} {QGIS
   Geographic Information System}}},\ \bibinfo {organization} {QGIS Association}
   (\bibinfo {year} {2022})\BibitemShut {NoStop}%
+\bibitem [{nat()}]{natural_earth_vectors}%
+  \BibitemOpen
+  \href {https://www.naturalearthdata.com/downloads/} {\enquote {\bibinfo
+  {title} {Natural {Earth} {Downloads} - {Free} vector and raster map data at
+  1:10m, 1:50m, and 1:110m scales},}\ }\BibitemShut {NoStop}%
+\bibitem [{gad()}]{gadm_vectors}%
+  \BibitemOpen
+  \href {https://gadm.org/download_country.html} {\enquote {\bibinfo {title}
+  {{GADM}},}\ }\BibitemShut {NoStop}%
+\bibitem [{tam()}]{taman_kinbalu_pp}%
+  \BibitemOpen
+  \href {https://www.protectedplanet.net/220292} {\enquote {\bibinfo {title}
+  {Protected {Planet} {\textbar} {Kinabalu} {Park}},}\ }\BibitemShut {NoStop}%
+\bibitem [{cal()}]{calakmul_pp}%
+  \BibitemOpen
+  \href {https://www.protectedplanet.net/61401} {\enquote {\bibinfo {title}
+  {Protected {Planet} {\textbar} {Región} de {Calakmul}},}\ }\BibitemShut
+  {NoStop}%
 \bibitem [{Note1()}]{Note1}%
   \BibitemOpen
   \bibinfo {note} {Https://github.com/E-Aho/Butterfly-Modeling}\BibitemShut
@@ -324,6 +332,13 @@
   {http://jmlr.org/papers/v13/brown12a.html} {\bibfield  {journal} {\bibinfo
   {journal} {Journal of Machine Learning Research}\ }\textbf {\bibinfo {volume}
   {13}},\ \bibinfo {pages} {27} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yang}\ and\ \citenamefont
+  {Moody}(1999)}]{yang_data_1999}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~H.}\ \bibnamefont
+  {Yang}}\ and\ \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont
+  {Moody}},\ }\bibfield  {booktitle} {\emph {\bibinfo {booktitle} {NIPS}},\
+  }\href@noop {} {\  (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ross}(2014)}]{Ross2014}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~C.}\ \bibnamefont
@@ -377,9 +392,7 @@
   {\bibfnamefont {Q.}~\bibnamefont {Ma}},\ }\href {\doibase 10.1111/gcb.12553}
   {\bibfield  {journal} {\bibinfo  {journal} {Global Change Biology}\ }\textbf
   {\bibinfo {volume} {20}},\ \bibinfo {pages} {2886} (\bibinfo {year}
-  {2014})},\ \bibinfo {note} {\_eprint:
-  https://onlinelibrary.wiley.com/doi/pdf/10.1111/gcb.12553}\BibitemShut
-  {NoStop}%
+  {2014})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Trenberth}(2011)}]{trenberth_changes_2011}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~E.}\ \bibnamefont
@@ -395,9 +408,7 @@
   \ and\ \bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont {Wilson}},\
   }\href {\doibase 10.1111/j.1365-2311.2008.01068.x} {\bibfield  {journal}
   {\bibinfo  {journal} {Ecological Entomology}\ }\textbf {\bibinfo {volume}
-  {34}},\ \bibinfo {pages} {437} (\bibinfo {year} {2009})},\ \bibinfo {note}
-  {\_eprint:
-  https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2311.2008.01068.x}\BibitemShut
+  {34}},\ \bibinfo {pages} {437} (\bibinfo {year} {2009})}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Bauerfeind}\ and\ \citenamefont
   {Fischer}(2014)}]{bauerfeind_simulating_2014}%

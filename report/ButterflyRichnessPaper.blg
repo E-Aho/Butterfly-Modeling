@@ -11,16 +11,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ButterflyRichnessPaperNotes.bib
 Database file #2: Bibliography.bib
-Repeated entry---line 847 of file Bibliography.bib
- : @article{white_human_2007
- :                          ,
-I'm skipping whatever remains of this entry
-Illegal end of database file---line 1147 of file Bibliography.bib
- : 
- : 
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "yang_data_2012"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
 Control: key (0) 
@@ -30,46 +20,52 @@ Control: production of article title (-1) disabled
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
+Warning--empty year in drakare_impint_2006
 Warning--missing journal in john_wiley__sons_ltd_species_2007
-You've used 46 entries,
+Warning--empty year in natural_earth_vectors
+Warning--empty year in gadm_vectors
+Warning--empty year in taman_kinbalu_pp
+Warning--empty year in calakmul_pp
+Warning--missing journal in yang_data_1999
+You've used 51 entries,
             5847 wiz_defined-function locations,
-            1986 strings with 26950 characters,
-and the built_in function-call counts, 43436 in all, are:
-= -- 2874
-> -- 1136
-< -- 274
-+ -- 377
-- -- 272
-* -- 6782
-:= -- 4293
-add.period$ -- 51
-call.type$ -- 46
-change.case$ -- 206
-chr.to.int$ -- 49
-cite$ -- 55
-duplicate$ -- 4047
-empty$ -- 3185
-format.name$ -- 666
-if$ -- 8614
+            1989 strings with 27100 characters,
+and the built_in function-call counts, 45044 in all, are:
+= -- 3000
+> -- 1128
+< -- 278
++ -- 387
+- -- 270
+* -- 6937
+:= -- 4502
+add.period$ -- 61
+call.type$ -- 51
+change.case$ -- 226
+chr.to.int$ -- 54
+cite$ -- 76
+duplicate$ -- 4210
+empty$ -- 3346
+format.name$ -- 664
+if$ -- 8896
 int.to.chr$ -- 4
-int.to.str$ -- 54
-missing$ -- 509
-newline$ -- 190
+int.to.str$ -- 59
+missing$ -- 516
+newline$ -- 205
 num.names$ -- 122
-pop$ -- 1656
+pop$ -- 1792
 preamble$ -- 1
-purify$ -- 228
+purify$ -- 248
 quote$ -- 0
-skip$ -- 1548
+skip$ -- 1617
 stack$ -- 0
-substring$ -- 1041
-swap$ -- 3830
-text.length$ -- 137
+substring$ -- 1098
+swap$ -- 3893
+text.length$ -- 136
 text.prefix$ -- 0
 top$ -- 8
-type$ -- 643
-warning$ -- 1
-while$ -- 119
+type$ -- 697
+warning$ -- 7
+while$ -- 118
 width$ -- 0
-write$ -- 418
-(There were 2 error messages)
+write$ -- 437
+(There were 7 warnings)
