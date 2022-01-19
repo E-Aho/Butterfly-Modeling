@@ -58,7 +58,7 @@ Exactly which features are most important to species richness is not well unders
 
 {\bf\em Method.--}We were provided with a set of 45 regions, and the number of species found in each. We generated a dataset by taking the mean across our regions for each feature, using open-source GIS tools.
 
-Based on the work in Species-Area relationships by Connor et al\cite{connor_2001_sar}, we created our target variable from the given data by taking $log(species \: count)/log(area)$, which gives us an estimator for species richness that is not dependent on the area of a region. Based on the studies discussed, we identified the importance of accounting for climatic variation, elevation, available energy, and human influences.  To account for climatic variability, we used the unitary 19 bioclimatic indices which account for the main climate-based physiological constraints for biodiversity\cite{hijmans_very_2005}. Our elevation, net solar flux and land coverage data are from the NASA Near Earth Observatory\footnote{For this paper, "Urban" was defined as the "Urban and Built Up" category in the Nasa Land Cover Classification, "Developed" was defined as Croplands, Urban, and Croplands & Vegetation, and "Natural Vegetation" was defined as any forest type, any shrublands, any savannas, grasslands, and wetlands}. We created our feature variables using open source GIS tools\cite{QGIS_software} to calculate zonal statistics, or a zonal histogram in the case of land coverage data, and rasters for each of the features we wanted to investigate. The output from the GIS feature extraction, as well as any preprocessing done before inputting the features into our model, is available on Github \footnote{https://github.com/E-Aho/Butterfly-Modeling}. The full list of features used, and the sources for the rasters, is given in Appendix A.
+Based on the work in Species-Area relationships by Connor et al\cite{connor_2001_sar}, we created our target variable from the given data by taking $log(species \: count)/log(area)$, which gives us an estimator for species richness that is not dependent on the area of a region. Based on the studies discussed, we identified the importance of accounting for climatic variation, elevation, available energy, and human influences.  To account for climatic variability, we used the unitary 19 bioclimatic indices which account for the main climate-based physiological constraints for biodiversity\cite{hijmans_very_2005}. Our elevation, net solar flux and land coverage data are from the NASA Near Earth Observatory. We created our feature variables using open source GIS tools\cite{QGIS_software} to calculate zonal statistics, or a zonal histogram in the case of land coverage data, and rasters for each of the features we wanted to investigate. The output from the GIS feature extraction, as well as any preprocessing done before inputting the features into our model, is available on Github \footnote{https://github.com/E-Aho/Butterfly-Modeling}. The full list of features used, and the sources for the rasters, is given in Appendix A.
 
 As we are aiming to create a set of features that are easily interpreted and applied to new data, we decided to use feature selection over principal component analysis (PCA). Within feature selection, we made use of a filter method instead of a wrapper method to limit risk of over-fitting, which could be quite prominent due to the large number of features in total (28) when compared to the total number of regions we had observations for (45).
 
@@ -70,7 +70,7 @@ JMI is an extension of the Mutual Information Feature Selection (MIFS) criterion
     J_{MIFS}(X_k) = I(X_k;Y) - \beta \sum_{X_j\in S} I(X_k;X_j)
 \]
 
-where S is the set of currently selected features, $X_k$ is a feature to select, $Y$ is our target variable, I denotes the information shared,  and $ \beta $ is a hyperparameter, which must be set experimentally. Using $\beta  = 0 $ would be equivalent to treating each feature as fully independent, and a larger value places more emphasis on reducing inter-feature dependencies. 
+where S is the set of currently selected features, $X_k$ is a feature to select, $Y$ is our target variable, I denotes the information shared,  and $ \beta $ is a hyperparameter, which must be set experimentally. Using $\beta  = 0 $ would be equivalent to treating each feature as fully independent, and a larger value places focuses more on reducing inter-feature dependencies in the selected data. 
 
 Yang and Moody (1999) and Meyer et al. (2008) proposed JMI in an effort to reduce the need to train hyperparameters, while still minimising redundancy in a selected feature set\cite{Brown2012}. The JMI score for a feature $X_k$ given an already selected set of features $S$ is:
 \[ 
@@ -102,17 +102,17 @@ First 10 Features & Information Gain \\
  \hline
  Annual mean Temperature & 0.854\\
  \hline 
- Annual insolation & 0.848\\ [1ex]
- \hline
+ Annual insolation & 0.848\\[1ex]
+\hline
 \end{tabular}
 \end{center}
 
-The result of the JMI feature selection algorithm highlighted a set of features that have optimal information gain with the target variable of this paper, $log(species \: count)/log(area)$. The mean temperature seasonality was the first feature selected by the algorithm. This means that when we took each feature and the target variable, this feature had the highest amount of information gain. 
+The result of the JMI feature selection algorithm highlighted a set of features that have optimal information gain with the target variable of this paper, $log(species \: count)/log(area)$. The mean temperature seasonality was the first feature selected by the algorithm. This means that when we took each feature and the target variable, this feature had the highest amount of information gain. The full table of all sequentially selected features and their information gains are given in Appendix B.
 
 \begin{center}\includegraphics[width=240pt]{Features.pdf}\end{center}
 
 \noindent {\bf\em Discussion.--}
-As we can see from the above plot, adding the second feature (precipitation in the driest month) added significantly more information than the first variable did alone. This shows that seasonality and the precipitation in the driest month together hold extra information about our target variable than either did separately. Precipitation is also known to be one of the most important environmental factors for butterflies\cite{m_environmental_2021}, so seeing seasonal precipitation features be among the most informative in our dataset make sense.
+As we can see from the above plot, adding the second feature (precipitation in the driest month) added significantly more information than the first variable did alone. This shows that seasonality and the precipitation in the driest month together hold extra information about our target variable than either did separately. Precipitation is also known to be one of the most important environmental factors for butterflies\cite{rueda-m_environmental_2021}, so seeing seasonal precipitation features be among the most informative in our dataset make sense.
 
 After adding the second feature, successive additions result in less information gain. This is indicative of increasing amounts of redundancy in our dataset. It should be noted that each feature is still increasing the total amount of information within our selected set, but that some of the information is already accounted for in other variables already selected (e.g mean temperature in the summer has a large amount of redundancy with annual max temperature).
 
@@ -126,10 +126,9 @@ A further limitation of our method is that we could not account for human biases
 
 One must also consider the flaws in the JMI algorithm. In particular, that it is a greedy algorithm, which selects a locally optimal feature at each stage, and should result in groups of features which have the highest mutual information with the target variable, but as noted by Gao et al, this method does not guarantee a globally optimal solution\cite{gao_variational_2016}.  A further study could implement JMIM, an adaptation of the JMI algorithm proposed by Bennasar et al\cite{bennasar_feature_2015}, which tackles this issue by conducting more searches on combinations of features and compare the findings to our results.
 
-An interstingly unimportant feature is that of the Island boolean tag, which did not show significant information gains, being the last selected feature, and having an information gain of just 0.373 Shannons, compared to 0.533 Shannons for the penultimate feature. This follows the findings of Kalmar and Currie in Avian species\cite{kalmar_unified_2007}. Kalmar and Currie found that most variation in species density is not context-specific, and varied similarly on continents and islands according to the same bioclimatic indices. Our findings seem to agree, and find that whether an area is an island or not does not add significant information to the dataset, and so is not particularly relevant to the species richness in butterflies.
+An interstingly unimportant feature is that of the Island boolean tag, which did not show significant information gains, being the last selected feature, and having an information gain of just 0.373 shannons, compared to 0.533 shannons for the penultimate feature. This follows the findings of Kalmar and Currie in Avian species\cite{kalmar_unified_2007}. Kalmar and Currie found that most variation in species density is not context-specific, and varied similarly on continents and islands according to the same bioclimatic indices. Our findings seem to agree, and find that whether an area is an island or not does not add significant information to the dataset, and so is not particularly relevant to the species richness in butterflies.
 
 \noindent {\bf\em Conclusion.--}
-
 Overall, we have been successful in reducing the original 28 features to a small subset of informative features for butterfly species richness. These findings can be used to help identify areas to focus conservation efforts on. However, they highlight that the list of features that affect butterfly richness is complex and that many connections exist between these variables. We hope that these findings might help inform conservation efforts by combining them with climatic predictions to identify areas that are most at risk of biodiversity loss in butterflies.
 
 
@@ -139,12 +138,12 @@ Overall, we have been successful in reducing the original 28 features to a small
 \onecolumngrid
 \appendix
 
-\section{Appendix A: Features used} \label{appendix:raw}
+\section{Appendix A: Features Used} \label{appendix:raw}
 The 28 features examined in our method were the following:
 \begin{itemize}
 \item Latitude
 \item Island (boolean referring to if the region is an island or not)
-\item Bioclimatic Variables (averaged across region)\cite{fick_wordlclim_2017}:
+\item Bioclimatic Variables (averaged across region)\cite{fick_worldclim_2017}:
 \begin{enumerate}
 	\item Annual Mean Temperature
 	\item Mean Diurnal Range
@@ -195,5 +194,74 @@ The 28 features examined in our method were the following:
 \item Particulate Matter $<$ 2.5~{\textmu}m \cite{van_donkelaar_global_2016}
 \item Elevation\cite{nasa_srtm}
 \end{itemize}
+
+\section{Appendix B: Full Results Table} \label{appendix:results}
+\noindent {\bf\em Results.--}\begin{center}\begin{tabular}{||c c||}
+ \hline
+Sequential features selected & Information Gain $/$ shannons \\
+ \hline\hline
+ Mean temperature seasonality & 0.801\\ 
+ \hline
+ Mean precipitation of driest month & 1.04\\
+ \hline
+ Mean precipitation of warmest quarter &  1.01\\
+ \hline
+ Mean max temperature of warmest month &  0.957\\
+ \hline
+ Mean diurnal temperature range & 0.949\\
+ \hline
+ Precipitation of wettest quarter & 0.913\\
+ \hline
+ Annual precipitation & 0.876\\
+ \hline
+ Latitude & 0.861\\
+ \hline
+ Annual mean Temperature & 0.854\\
+ \hline 
+ Annual insolation & 0.848\\ 
+ \hline
+ Isothermality & 0.845\\
+ \hline
+ Temperature annual range & 0.839\\
+ \hline
+ Mean temperature of wettest quarter & 0.839\\
+ \hline
+ Precipitation of driest quarter & 0.823\\
+ \hline
+ Mean temperature of driest quarter & 0.802\\
+ \hline
+ Precipitation of wettest month & 0.798\\
+ \hline
+ PM 2.5 Concentration & 0.789\\
+ \hline
+ Precipitation seasonality & 0.767\\
+ \hline
+ Net Flux & 0.764\\
+ \hline
+ Percent Developed & 0.758\\
+ \hline
+ Precipitation of coldest quarter & 0.743\\
+ \hline
+ Mean temperature of coldest quarter & 0.739\\
+ \hline
+ Mean temperature of warmest quarter & 0.718\\
+ \hline
+ Percent Urbanized & 0.711\\
+ \hline
+ Elevation & 0.661\\
+ \hline
+ Percent Naturally Vegetated & 0.639\\
+ \hline
+ Minimum temperature of coldest month & 0.533\\
+ \hline
+ Island & 0.373\\[1ex]
+ \hline
+ 
+ 
+ 
+\end{tabular}
+\end{center}
+
+
 
 \end{document}

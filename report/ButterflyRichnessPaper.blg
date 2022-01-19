@@ -15,18 +15,15 @@ I was expecting a `,' or a `}'---line 1 of file ButterflyRichnessPaperNotes.bib
  :                                                    Urban" was defined as the "Urban and Built Up" category in the Nasa Land Cover Classification, "Developed" was defined as Croplands, Urban, and Croplands & Vegetation, and "Natural Vegetation" was defined as any forest type, any shrublands, any savannas, grasslands, and wetlands"}
 I'm skipping whatever remains of this entry
 Database file #2: Bibliography.bib
-Repeated entry---line 839 of file Bibliography.bib
+Repeated entry---line 840 of file Bibliography.bib
  : @article{white_human_2007
  :                          ,
 I'm skipping whatever remains of this entry
-Illegal end of database file---line 1133 of file Bibliography.bib
+Illegal end of database file---line 1134 of file Bibliography.bib
  : 
  : 
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "m_environmental_2021"
-Warning--I didn't find a database entry for "fick_wordlclim_2017"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
 Control: key (0) 
@@ -40,45 +37,45 @@ Warning--missing journal in john_wiley__sons_ltd_species_2007
 Warning--missing journal in yang_data_2012
 Warning--empty year in Homola2016
 Warning--empty year in nasa_srtm
-You've used 46 entries,
+You've used 48 entries,
             5847 wiz_defined-function locations,
-            1976 strings with 26644 characters,
-and the built_in function-call counts, 42221 in all, are:
-= -- 2801
-> -- 1087
-< -- 265
-+ -- 364
-- -- 260
-* -- 6564
-:= -- 4179
-add.period$ -- 51
-call.type$ -- 46
-change.case$ -- 206
-chr.to.int$ -- 50
-cite$ -- 60
-duplicate$ -- 3930
-empty$ -- 3104
-format.name$ -- 638
-if$ -- 8363
+            1990 strings with 27188 characters,
+and the built_in function-call counts, 44219 in all, are:
+= -- 2928
+> -- 1145
+< -- 278
++ -- 382
+- -- 274
+* -- 6879
+:= -- 4375
+add.period$ -- 53
+call.type$ -- 48
+change.case$ -- 214
+chr.to.int$ -- 52
+cite$ -- 62
+duplicate$ -- 4118
+empty$ -- 3251
+format.name$ -- 674
+if$ -- 8761
 int.to.chr$ -- 3
-int.to.str$ -- 54
-missing$ -- 493
-newline$ -- 190
-num.names$ -- 116
-pop$ -- 1633
+int.to.str$ -- 56
+missing$ -- 517
+newline$ -- 196
+num.names$ -- 122
+pop$ -- 1713
 preamble$ -- 1
-purify$ -- 225
+purify$ -- 235
 quote$ -- 0
-skip$ -- 1508
+skip$ -- 1577
 stack$ -- 0
-substring$ -- 1031
-swap$ -- 3696
-text.length$ -- 131
+substring$ -- 1070
+swap$ -- 3875
+text.length$ -- 138
 text.prefix$ -- 0
 top$ -- 8
-type$ -- 637
+type$ -- 666
 warning$ -- 4
-while$ -- 115
+while$ -- 120
 width$ -- 0
-write$ -- 408
+write$ -- 424
 (There were 3 error messages)
